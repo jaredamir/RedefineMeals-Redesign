@@ -1,0 +1,558 @@
+body{
+	background-color: #fafff9;
+}
+/* Testimonial-Card */
+div.testimonial_container-mobile-tablet{ /* the container for the mobile and tablet view */
+	display: block;
+	width: 100%;
+	animation: fadeIn 1.5s;
+}
+
+div.testimonial_container-desktop{ /* the container for the desktop view */
+	display: inline-flex;
+	flex-direction: row;
+	position: relative;
+	justify-content: space-evenly;
+	width: 100%;
+	animation: fadeIn 1.5s;
+}
+
+.testimonial_card-thin{
+	height: fit-content;
+	width: fit-content;
+
+	border: solid 1px;
+	border-color: lightgrey;
+	border-radius: 2px;
+
+	display: inline-flex;
+	flex-direction: column;
+
+	min-width: 200px;
+}
+
+.testimonial_card-thin img{
+	height: 50% ;
+	width: 100%;
+}
+
+.testimonial_card-thin div{
+	height: 50%;
+	width: 100%;
+	padding: 13px 40px;
+
+	background-image: url("https://redefinemeals.com/storage/photos/15/Resized%20Images/Redefine_logo-dark_background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
+}
+
+.arrow-down{
+	display: inline-block;
+	border: solid;
+	border-width: 0px 3px 3px 0px;
+	border-color: rgba(0, 0, 0, .5);
+	padding: 3px;
+	transform: rotate(45deg);
+
+	animation-name: arrow-down-animation;
+	animation-direction: alternate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+/*###*/
+
+
+
+/*Header*/
+div.heading{
+	height: fit-content;
+	width: 100%;
+	padding: 50px 20px;
+	background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 40px;
+
+
+	box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+div.heading h1{
+	font-size: 10vw;
+	color: darkslategray;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-align: center;
+
+} 
+
+div.heading p{
+	font-size: 20;
+	text-align: center;
+	color: grey;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	
+
+	margin-bottom: 10px;
+}
+/*###*/
+
+
+
+/*Leave A Review and QR Code*/
+div.qr-code{
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+	margin: 70px 0px;
+}
+
+div.qr-code h1{
+	font-size: 90px;
+	color: darkslategray;
+	margin: 15px 0px;
+	text-align: center;
+}
+
+div.qr-code img{
+	width: 15rem;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	position: relative;
+	transition: all .2s ease-in-out;
+}
+
+div.qr-code p{
+	color: grey;
+	text-align: center;
+}
+
+img.center{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* ### */
+
+
+
+
+/* Reviews */
+div.reviews_section-header{
+	width: 100%;
+	height: fit-content;
+	display: block;
+	margin: 100px 5px;
+}
+
+div.reviews_section-header h1{ /* this header uses the Google Font Roboto 100 */
+	font-size: 15vw;
+	color: darkslategray;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-weight: 100;
+}
+
+div.reviews_section-header p{
+	font-size: 1vw;
+	color: gray;
+	text-align: center;
+
+
+}
+
+
+div.review{
+	border-bottom: 1px solid lightgray;
+	width: 100%;
+	height: fit-content;
+	margin: 0px 10px 0px 10px;
+	position: relative;
+}
+
+div.review > div.review-heading{
+	display: flex;
+	width: fit-content;
+	height: 15%;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+div.review-heading img{
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+	margin: 10px 10px 0px 10px;
+}
+
+div.review-heading::after{
+	position: absolute;
+	bottom: 0;
+	left: 65px;
+	content: "Verified By Google";
+	color: gray;
+	font-size: 10px;
+	white-space: nowrap;
+}
+
+p.review-heading-name{
+	display: block;
+	position: relative;
+	font-size: 25px;
+	margin-top: 15px;
+	color: darkslategray;
+	font-weight: bold;
+
+}
+
+div.review-content{
+	display: block;
+	font-size: 23px;
+	color: darkslategray;
+	position: relative;
+	margin: 10px 30px 20px 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-weight: 300;
+}
+
+div.stars{
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	margin: 15px 50px 15px 50px;
+	column-gap: 5px;
+}
+
+div.stars svg{
+	animation-name: stars-animation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
+/* ### */
+
+
+
+/*Animations*/
+svg:nth-child(2){ /*Each star in the div is delayed by +.3 seconds to create a wave effect*/
+	animation-delay: .3s;
+}
+svg:nth-child(3){
+	animation-delay: .6s;
+}
+svg:nth-child(4){
+	animation-delay: .9s;
+}
+svg:nth-child(5){
+	animation-delay: 1.2s;
+}
+
+@keyframes stars-animation{
+	from{
+
+	}
+	to{
+	transform: scale(1.15);
+	}
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; 
+  	transform: translateY(20px);
+  }
+  100% { opacity: 1; }
+}
+
+@keyframes arrow-down-animation{
+	0%{
+		transform: translateY(0px) rotate(45deg);
+		
+	}
+	100%{
+		transform: translateY(10px) rotate(45deg);
+	}
+}
+/*###*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Testimonial Card Below Mobile Width View*/
+@media only screen and (min-width: 1px){
+			div.testimonial_container-mobile-tablet{
+				position: relative;
+				display: block;
+				width: 100%;
+			}
+
+			div.testimonial_container-desktop{
+				display: none;
+				flex-direction: row;
+			}
+
+			.testimonial_card-thin{
+				height: fit-content;
+				width: fit-content;
+
+				border: solid 1px;
+				border-color: lightgrey;
+				border-radius: 2px;
+
+				display: inline-flex;
+				flex-direction: column;
+
+				
+			}
+
+			.testimonial_card-thin img{
+				height: 50% ;
+				width: 100%;
+			}
+
+
+			.testimonial_card-thin p{
+				color: darkslategray;
+				font-size: 18px;
+				font-family: Helvetica, sans-serif;
+			}
+
+			.arrow-down{
+				position: absolute;
+				right: 50%;
+
+			}
+
+			@keyframes arrow-down-animation{
+				0%{
+					transform: translateY(-10px) rotate(45deg);
+					
+				}
+				100%{
+					transform: translateY(10px) rotate(45deg);
+				}
+			}
+
+			.heading{
+				display: none;
+			}
+
+			div.reviews_section-header h1{ /* at below mobile view the font size stays fized at 60px */
+				font-size: 60px;
+			}
+
+			div.reviews_section-header p{
+				font-size: 2vw;
+			}
+
+/*Testimonial Card Mobile View*/
+@media only screen and (min-width: 375px){
+			div.testimonial_container-mobile-tablet{
+				position: relative;
+				display: block;
+				width: 100%;
+			}
+
+			div.testimonial_container-desktop{
+				display: none;
+				flex-direction: row;
+			}
+
+			.testimonial_card-thin{
+				
+				display: inline-flex;
+				flex-direction: column;
+
+				
+			}
+
+			.testimonial_card-thin img{
+				height: 50% ;
+				width: 100%;
+			}
+
+			.arrow-down{
+				position: absolute;
+				right: 50%;
+
+			}
+
+			@keyframes arrow-down-animation{
+				0%{
+					transform: translateY(-8px) rotate(45deg);
+					
+				}
+				100%{
+					transform: translateY(8px) rotate(45deg);
+				}
+			}
+
+			.heading{
+				display: none;
+			}
+
+			div.reviews_section-header h1{ /* at mobile view the font changes at 20vw */
+				font-size: 20vw;
+			}
+
+			div.reviews_section-header p{ /* at mobile view the font changes at 10vw  */
+				font-size: 10px;
+			}
+}
+/* Testimonial Card tablet View*/
+@media only screen and (min-width: 768px){
+			div.testimonial_container-mobile-tablet{
+				display: block;
+				width: 100%;
+				padding: 30px 20px;
+			}
+
+			div.testimonial_container-desktop{
+				display: none;
+				flex-direction: row;
+			}
+
+			.testimonial_card-thin{
+				height: fit-content;
+				width: fit-content;
+
+				border: solid 1px;
+				border-color: lightgrey;
+				border-radius: 5px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+
+				display: inline-flex;
+				flex-direction: row;
+			}
+
+			.testimonial_card-thin img{
+				height:20rem;
+				width: auto;
+				
+
+				/*More Round as Media Changes*/border-radius: 2px;
+			}
+
+			.testimonial_card-thin div{
+				height: 20rem;
+				width: auto;
+				padding: 13px 40px;
+				overflow: auto;
+
+			}
+
+			.arrow-down{
+				display: none;
+			}
+
+			.heading{
+				display: block;
+			}
+
+			div.reviews_section-header h1{ /* above mobile view the font size changes with the screen size */
+				font-size: 15vw;
+			}
+			
+			div.reviews_section-header p{ /* above mobile view the font size changes with the screen size */
+				font-size: 1vw;
+			}
+
+}
+/* Testimonial Card desktop View*/
+@media only screen and (min-width: 1024px){
+
+			div.testimonial_container-mobile-tablet{
+				display: none;
+			}
+
+			div.testimonial_container-desktop{
+				display: inline-flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				animation: fadeIn 1.5s;
+			}
+
+			.testimonial_card-thin{
+
+				display: inline-flex;
+				flex-direction: column;
+
+				transition: all .2s ease-in-out;
+			}
+
+			.testimonial_card-thin img{
+				height: 50%;
+				width: 21rem;
+			}
+
+			.testimonial_card-thin div{
+				position: relative;
+				height: 25rem;
+				width: 21rem;
+				padding: 13px 40px;
+				overflow: auto;
+
+				background-image: url("https://redefinemeals.com/storage/photos/15/Resized%20Images/Redefine_logo-dark_background.jpg");
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-size: cover;
+			  background-position: center center;
+			}
+
+			.testimonial_card-thin:hover{
+				
+				transform: scale(1.1);
+				box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.1), 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+			}
+
+			.arrow-down{
+				display: inline-block;
+			}
+
+			.heading{
+				display: block;
+			}
+
+			div.qr-code img:hover{
+				transform: scale(1.1);
+			}
+
+			div.reviews_section-header h1{ /* above mobile view the font size changes with the screen size */
+				font-size: 15vw;
+			}
+
+			div.reviews_section-header p{
+				font-size: 1vw;
+			}
+}

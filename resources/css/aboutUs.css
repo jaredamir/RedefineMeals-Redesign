@@ -1,0 +1,225 @@
+div.whitespace{
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+/*About Us Container*/
+div.about_us-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 50px;
+
+
+    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
+
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 1px;
+}
+
+div.about_us-header h1::after{
+    content: "" ;
+    position: absolute;
+    left: 25%;
+    bottom: 30%;
+    width: 70px;
+    height: 10px;
+    background-color: darkslategrey;
+}
+
+div.about_us-header h1{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 7vw;
+}
+
+div.about_us{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+div.about_us img{
+    width: 35vw;
+    height: auto;
+}
+
+div.about_us-caption{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    padding: 50px 50px;
+}
+
+i.about_us-accent{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    height: 10%;
+    width: 1%;
+    background-color: darkslategrey;
+}
+
+
+div.about_us-caption h3{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 3vw;
+}
+
+div.about_us-caption h2{
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 4vw;
+}
+
+
+/* Values Container */
+div.values_container-desktop {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    font-size: 10vw;
+
+}
+
+div.values_card-desktop{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+div.values_card-desktop-background{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+div.values_card-desktop h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 11vw;
+    color: darkslategray;
+    position: relative;
+    margin-top: 15%;
+    margin-bottom: 30px;
+}
+div.values_card-desktop h3{
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 0px 100px;
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+div.page-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+div.page-header h1::after{
+    content: "" ;
+    position: absolute;
+    left: 25%;
+    bottom: 30%;
+    width: 70px;
+    height: 10px;
+    background-color: darkslategrey;
+}
+
+div.page-header h1{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 9vw;
+}
+
+
+strong{
+    color: darkcyan;
+}
+
+.about_us-caption strong{
+    color: #76BE48;
+    font-weight: bold;
+}
+
+.arrow-down{
+    display: inline-block;
+    border: solid;
+    border-width: 0px 3px 3px 0px;
+    border-color: rgba(0, 0, 0, .5);
+    padding: 3px;
+    transform: rotate(45deg);
+
+    animation-name: arrow-down-animation;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow-down-animation{
+    0%{
+        transform: translateY(0px) rotate(45deg);
+        
+    }
+    100%{
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+
+
+div.heading{
+    height: fit-content;
+    width: 100%;
+    padding: 50px 20px;
+    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 40px;
+
+
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+div.heading h1{
+    font-size: 10vw;
+    color: darkslategray;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 100;
+
+} 

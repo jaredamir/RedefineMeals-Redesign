@@ -1,0 +1,166 @@
+	div.landing-section{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		margin-bottom: 100px;
+		
+	}
+
+	div.landing-section > div.giftCard{
+		position: absolute;
+		width: 800px;
+		height: 65%;
+		left: -10%;
+		top: 30%;
+
+		background: radial-gradient(24.47% 59.71% at 77.16% 63.14%, #FFFFFF 0%, #EDEAEA 61.61%, #FFFFFF 100%);
+		background-image: url("{{url('/images/Redefine_leaf_hd.jpg')}}");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		box-shadow: 27.1875px 27.1875px 61.1719px 13.5938px rgba(0, 0, 0, 0.15), 101.953px 101.953px 101.953px 27.1875px rgba(0, 0, 0, 0.15), 6.79688px 8px 0px rgba(137, 137, 137, 0.25);
+		border-radius: 33.9844px;
+		/*
+		animation-name: giftCard-animation;
+		animation-duration: 2s;
+		animation-direction: alternate;
+		animation-timing-function: ease-in;
+		animation-iteration-count: infinite;
+		*/
+	}
+
+
+	div.landing-section h1{
+		position: absolute;
+		width: 497px;
+		height: 346px;
+		right: 15%;
+		top: 88px;
+
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 128px;
+		line-height: 155px;
+		text-align: right;
+
+		color: #2F4F4F;
+	}
+
+	div.landing-section h1::after{
+	    content: "" ;
+	    position: absolute;
+	    left: 20%;
+	    bottom: 0%;
+	    width: 70px;
+	    height: 10px;
+	    background-color: darkslategrey;
+	}
+
+	div.checkout-section{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		overflow-x: hidden;
+	}
+
+	div.checkout-section > div.giftCard2{
+		position: absolute;
+		width: 800px;
+		height: 65%;
+		right: -10%;
+		top: 15%;
+
+		background: radial-gradient(24.47% 59.71% at 77.16% 63.14%, #FFFFFF 0%, #EDEAEA 61.61%, #FFFFFF 100%);
+		background-image: url("{{url('/images/Redefine_leaf_hd.jpg')}}");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		box-shadow: 27.1875px 27.1875px 61.1719px 13.5938px rgba(0, 0, 0, 0.15), 101.953px 101.953px 101.953px 27.1875px rgba(0, 0, 0, 0.15), 6.79688px 8px 0px rgba(137, 137, 137, 0.25);
+		border-radius: 33.9844px;
+	}
+
+
+
+
+
+	div.checkout-section > div.checkout{
+		position: absolute;
+		top: 12%;
+		left: 5%;
+		width: 612px;
+		height: 85vh;
+		background-color: white;
+		border: 1px solid #CCCCCC;
+		border-radius: 10px;
+	}
+
+	div.checkout div.header{
+		width: 100%;
+		height: 10%;
+		border-bottom: 1px solid #CCCCCC;
+	}
+
+	div.checkout div.header h3{
+		font-family: "Roboto";
+		font-weight: 300;
+		margin: 20px 10px;
+	}
+
+	div.checkout div.giftCard_list{
+		width: 100%;
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		overflow-y: scroll;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	div.checkout div.giftCard_list li{
+		width: 400px;
+		height: 70px;
+		left: 101px;
+		top: 866px;
+		border: none;
+		background: #DCFACC;
+		border-radius: 20px;
+		color: white;
+		font-family: "Roboto";
+		font-weight: 300;
+		font-size: 30px;
+		list-style: none;
+	}
+
+	div.checkout div.footer{
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 20%;
+		border-top: 1px solid #CCCCCC;
+		align-items: center;
+		justify-content: center;
+	}
+	div.checkout div.footer button{
+		width: 400px;
+		height: 70px;
+		left: 101px;
+		top: 866px;
+		border: none;
+		background-color: #86D172;
+		border-radius: 20px;
+		color: white;
+		font-family: "Roboto";
+		font-weight: 300;
+		font-size: 30px;
+	}
+
+	@keyframes giftCard-animation{
+		0%{
+			transform: scale(2);
+		}
+		100%{
+			transform: scale(1)
+		}
+	}
+
