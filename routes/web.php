@@ -25,10 +25,6 @@ Route::get('/aboutus', function () {
     return view('aboutUs');
 });
 
-Route::get('/howitworks', function () {
-    return view('howItWorks');
-});
-
 Route::get('/giftcards', function () {
     return view('giftCards');
 });
@@ -43,4 +39,8 @@ Route::get('/menu', function () {
 
 Route::get('/faq', function () {
     return view('faq');
+});
+
+Route::get('/stores', function () {
+    return view('store_locations');
 });

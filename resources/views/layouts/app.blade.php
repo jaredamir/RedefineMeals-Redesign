@@ -30,6 +30,15 @@
 
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        
+        <!-- Leaflet for Interactive Map -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
         <style>
            body{
             margin: 0px 0px;
@@ -113,8 +122,9 @@
                 <a href="/giftcards">Gift Cards</a>
                 <a href="/meettheteam">MTT</a>
                 <a href="/faq">FAQ</a>
+                <a href="/stores">Stores</a>
             </div>
-            
+            <noscript>Please Enable Javascript In Your Browser To View This Page</noscript>
             @yield('content')
 
     <script src="{{url('js/navbar.js')}}"></script>
