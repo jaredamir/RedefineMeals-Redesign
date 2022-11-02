@@ -82,7 +82,6 @@
 	}
 	div.highlight_container{
 		display: none;
-		transition: opacity .2s ease-in-out;
 	}
 
 	div.member_highlight{
@@ -103,6 +102,23 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;	
+	}
+
+	@keyframes member_highlight-animation{
+		0%{background-color: red;}
+		100%{background-color: blue;}
+		/*
+		0%{
+			transform: scale(0.0);
+			border-radius: 50;
+		}50%{
+			transform: scale(.5);
+			border-radius: 25;
+		}100%{
+			transform: scale(1.0);
+			border-radius: 0;
+		}
+		*/
 	}
 
 
@@ -247,17 +263,17 @@
 			this.name = name_id
 			this.highlight = document.getElementById(name_id)
 			this.caption = document.getElementById(name_id + '-caption')
+			
 		};
 		hideMember(){
-			this.highlight.style.opacity = '0'
 			this.highlight.style.display = 'none'
 			this.caption.style.display = 'none'
+			
 		}
 		showMember(){
 			this.highlight.style.display = 'block'
-			this.highlight.style.opacity = '1'
 			this.caption.style.display = 'block'
-
+			this.highlight.style.animation = 'member_highlight-animation 2s forwards'
 		}
 	}
 

@@ -2,19 +2,176 @@
 
 @section('content')
 <style type="text/css">
+div.locations-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 200px;
+    margin-bottom: 50px;
 
+
+    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+div.locations-header h1{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Roboto';
+    font-size: 7vw;
+}
+
+
+div.map_section{
+	position: relative;
+	width: 100vw;
+	height: 95vh;
+	border: 1px solid lightgray;
+}
+/*Leaflet Map*/
+div.map_section > #map{
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+/*Location List*/
+div.map_section > div.locations_list{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 35%;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(8px);
+	border: 1px solid lightgray;
+}
+
+div.locations_list > div.list_header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 190px;
+	width: 100%;
+	padding: 10px 30px;
+	border-bottom: 1px solid lightgray;
+}
+div.list_header h1{
+	font-weight: 100;
+    font-family: 'Roboto';
+    font-size: 3.2vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+div.list_header input{
+	border: 1px solid lightgray;
+	border-radius: 50px;
+	height: 55px;
+	padding: 10px 30px;
+
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 1vw;
+	color: grey;
+}
+div.list_header input:focus{
+	outline: none;
+}
+
+
+div.locations_list > div.list_body{
+	position: relative;
+	height: calc(100% - 190px);
+	width: 100%;
+	overflow: scroll;
+
+	display: flex;
+	flex-direction: column;
+}
+div.list_body > div.location_item{
+	position: relative;
+	height: fit-content;
+	width: 100%;
+	border-bottom: 1px solid lightgray;
+	padding: 20px 0px;
+}
+div.location_item h2{
+	font-weight: 100;
+    font-family: 'Roboto';
+    font-size: 2vw;
+    text-align: left;
+    margin: 15px 40px;
+}
+div.location_item h3{
+	font-weight: 100;
+    font-family: 'Roboto';
+    font-size: 1.5vw;
+    text-align: left;
+    margin: 15px 40px;
+}
+div.location_item button{
+	background: transparent;
+	background-color: rgb(132, 209, 114, .7);
+	border: none;
+	font-family: 'Roboto';
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.5vw;
+	color: white;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px 40px;
+	border-radius: 2px;
+	margin: 15px 30px;
+}
 
 </style>
 
+	<div class="locations-header"data-aos="fade-down"><h1>OUR LOCATIONS</h1></div>
 
-	<div id="map" style="height: 95vh; margin-top: 100px;" data-aos="fade-in"></div>
+	<div class="map_section" data-aos="fade-in">
+		<div id="map"></div>
+		<div class="locations_list">
+			<div class="list_header">
+				<h1>Store Locations</h1>
+				<input type="text" id="locations_zipcode" name="locations_zipcode" placeholder="Enter Your Zip Code">
+			</div>
+			<div class="list_body">
+				<div class="location_item">
+					<h2>Lake Grove, NY</h2>
+					<h3>1015 Hawkins Ave, Lake Grove, NY 11755</h3>
+					<h3>(631) 800-8199</h3>
+					<button id="store_name">View More</button>
+				</div>
+				<div class="location_item">
+					<h2>Bellmore, NY</h2>
+					<h3>2693 Merrick Rd, Bellmore, NY 11710</h3>
+					<h3>(516) 804-8472</h3>
+					<button id="store_name">View More</button>
+				</div>
+				<div class="location_item">
+					<h2>Commack, NY</h2>
+					<h3>63 Commack Rd, Commack, NY 11725</h3>
+					<h3>(631) 623-6643</h3>
+					<button id="store_name">View More</button>
+				</div>
 
-
+			</div>
+		</div>
+	</div>
 
 
 <script type="text/javascript">
 	//makes the actual map to attach to the html element
-	let myMap = L.map("map").setView([40.7891, -73.1350], 10);
+	let myMap = L.map("map").setView([40.8891, -73.2350], 10);
 	myMap.scrollWheelZoom.disable();
 
 	//tile laye gives the theme(style) to display

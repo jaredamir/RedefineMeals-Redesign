@@ -26,9 +26,7 @@ div.about_us-header{
     background-size: cover;
     background-position: center center;
 
-    border-color: lightgrey;
-    border-style: solid;
-    border-width: 1px;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 div.about_us-header h1::after{
@@ -386,10 +384,10 @@ div.heading h1{
 
         }
         
-
+        
     window.addEventListener('scroll', () => {
         //each card is instantiated here (it is placed in the event function so that the placement is updated on window resize)
-
+        
         //while the rate can be customzied invidially, it was set to .001 so each card has a the same rate since they are all the same height on this page
         set_rate = .001
 
