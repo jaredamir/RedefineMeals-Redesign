@@ -154,13 +154,14 @@ div.otf_section h1{
     font-weight: 100;
     font-family: 'Roboto';
     font-size: 5vw;
+    white-space: nowrap;
 }
 div.otf_section h2{
     font-weight: 100;
     font-family: 'Roboto';
     font-size: 2vw;
     margin-bottom: 100px;
-    line-height: 165.02%;
+    line-height: 200%;
 }
 div.otf_header{
 	display: flex;
@@ -204,28 +205,27 @@ div.otf_locations > div.otf_card{
 	border-radius: 20px;
 	padding: 30px 30px;
 }
-div.otf_card h2{
+div.otf_card h3{
 	font-weight: 100;
     font-family: 'Roboto';
-    font-size: 1.2vw;
+    font-size: 16px;
     text-align: left;
     margin: 15px 0px;
     border-bottom: 1px solid lightgray;
 }
-div.otf_card h3{
+div.otf_card h4{
 	font-weight: 100;
     font-family: 'Roboto';
-    font-size: 1vw;
+    font-size: 14px;
     text-align: left;
 }
 div.otf_card button{
-	background: transparent;
 	background-color: rgba(233, 146, 61, 1);
 	border: none;
 	font-family: 'Roboto';
 	font-weight: 100;
 	text-align: center;
-	font-size: 1vw;
+	font-size: 14px;
 	color: white;
 	padding: 10px 40px;
 	border-radius: 2px;
@@ -267,6 +267,32 @@ div.otf_card button{
 		border-bottom: none;
 		border-left: 1px solid lightgray;
 	}
+	div.otf_locations > div.otf_card{
+		width: 250px;
+		min-width: 250px;
+		height: 250px;
+		border-radius: 15px;
+	}
+
+	div.otf_card h3{
+	    font-size: 14px;
+	}
+	div.otf_card h4{
+	    font-size: 12px;
+	}
+	div.otf_card button{
+		font-size: 12px;
+	}
+
+	div.otf_section h1{
+	    font-size: 6vw;
+	}
+	div.otf_section h2{
+	    font-size: 3vw;
+	}
+	div.otf_section > div.otf_bio{
+		width: 90%;
+	}
 	
 }
 
@@ -303,6 +329,30 @@ div.otf_card button{
 	div.list_body > div.location_item{
 		border-bottom: 1px solid lightgray;
 		border-left: none;
+	}
+	div.otf_locations > div.otf_card{
+		width: 300px;
+		min-width: 300px;
+		height: 300px;
+		border-radius: 20px;
+	}
+	div.otf_card h3{
+	    font-size: 16px;
+	}
+	div.otf_card h4{
+	    font-size: 14px;
+	}
+	div.otf_card button{
+		font-size: 14px;
+	}
+	div.otf_section h1{
+	    font-size: 5vw;
+	}
+	div.otf_section h2{
+	    font-size: 2vw;
+	}
+	div.otf_section > div.otf_bio{
+		width: 70%;
 	}
 }
 
@@ -369,18 +419,18 @@ div.otf_card button{
 		<h1>Partnering Locations</h1>
 		<div class="otf_locations">
 			<div class="otf_card">
-				<h2>Unique Fitness Farmingville</h2>
-				<h3>1191 Portion Road, Farmingville, NY 11738</h3>
+				<h3>Unique Fitness Farmingville</h3>
+				<h4>1191 Portion Road, Farmingville, NY 11738</h4>
 				<button>View More</button>
 			</div>
 			<div class="otf_card">
-				<h2>Unique Fitness Holbrook</h2>
-				<h3>4890 Veterans Memorial Highway, Holbrook, NY 11741</h3>
+				<h3>Unique Fitness Holbrook</h3>
+				<h4>4890 Veterans Memorial Highway, Holbrook, NY 11741</h4>
 				<button>View More</button>
 			</div>
 			<div class="otf_card">
-				<h2>Unique Fitness Shirley</h2>
-				<h3>78 McGraw Street, Shirley, NY 11967</h3>
+				<h3>Unique Fitness Shirley</h3>
+				<h4>78 McGraw Street, Shirley, NY 11967</h4>
 				<button>View More</button>
 			</div>
 		</div>
