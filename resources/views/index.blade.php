@@ -136,6 +136,65 @@
 		transition: all .2s ease-in;
 	}
 
+	/*How it works*/
+	div.instructions_section{
+		position: relative;
+		width: 100vw;
+		height: 50vw;
+		border: 1px solid lightgray;
+	}
+	div.instructions_section > div.instruction_slide{
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		padding: 40px 100px;
+	}
+	div.instruction_slide > div.slide_header{
+		display: flex;
+		justify-content: space-between;
+	}
+	div.instruction_slide > div.slide_header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 30%;
+		margin-bottom: 10px;
+	}
+	div.instruction_slide > div.slide_body{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 60%;
+	}
+	div.instruction_slide h1{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 5vw;
+	}
+	div.instruction_slide h3{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 3vw;
+	}
+	div.slide_index{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 10vw;
+		height: 10vw;
+		border-radius: 20%;
+		background-color: rgb(132, 209, 114, .7);
+		color: white;
+		margin: 0px 20px;
+	}
+	div.slide_body img{
+		border-radius: 20px;
+		width: auto;
+		height: 40vw;
+		margin-left:50px;
+	}
+
 
 </style>
 <div class="videoBanner" data-aos="fade-in">
@@ -150,7 +209,49 @@
 	</div>
 </div>
 
-<div class="deliver_section">
+<div class="instructions_section">
+
+	<div class="instruction_slide">
+		<div class="slide_header">
+			<h1>CHOOSE YOUR MEALS</h1>
+			<div class="slide_index"><h1>1</h1></div>
+		</div>
+		<div class="slide_body">
+			<h3>Pick your favorite meals - We have +60 healthy prepared meals on our menu, and add new options weekly.  We offer 7, 10, 15 and 20 meal options. </h3>
+			<img src="{{url('/images/RedefineMeals_aug22-8429.jpg')}}">
+		</div>
+	</div>
+</div>
+
+<div class="instructions_section">
+
+	<div class="instruction_slide">
+		<div class="slide_header">
+			<h1>CHOOSE YOUR DELIVERY METHOD</h1>
+			<div class="slide_index"><h1>2</h1></div>
+		</div>
+		<div class="slide_body">
+			<h3>We deliver to Long Island and New York City four days a week. We also offer free in-store pick up at our <a href="/stores"> 7 store locations</a>.</h3>
+			<img src="{{url('/images/RedefineMeals_Apr22-3883.jpg')}}">
+		</div>
+	</div>
+</div>
+
+<div class="instructions_section">
+
+	<div class="instruction_slide">
+		<div class="slide_header">
+			<h1>ENJOY!</h1>
+			<div class="slide_index"><h1>3</h1></div>
+		</div>
+		<div class="slide_body">
+			<h3>Heat, Eat & Repeat - Our meals come in microwavable and freezer-safe containers with specific heating instructions.  We recommend eating or freezing meals within 4-5 days. Order each week for Sunday, Monday, Tuesday or Thursday delivery.</h3>
+			<img src="{{url('/images/RedefineMeals_aug22-8093.jpg')}}">
+		</div>
+	</div>
+</div>
+
+<div class="deliver_section" data-aos="fade-up">
 	<div class="deliver">
 		<div class="deliver_ui">
 			<h1>Do We Deliver To You</h1>
@@ -163,12 +264,22 @@
 </div>
 
 <script type="text/javascript">
-	
-	function validate(){
-		var inp_zipcode = document.getElementById('zipcode')
-		var button_zipcode = document.getElementById("zipcode_button")
-		const deliverables = ['07020', '11733', '10956', '37690']
+	let inp_zipcode = document.getElementById('zipcode')
+	let button_zipcode = document.getElementById("zipcode_button")
+	const deliverables = ['07020', '11733', '10956', '37690']
 
+	function reset_zipcode_button(){
+		button_zipcode.innerHTML = "Find Out"
+		button_zipcode.style.backgroundColor = "rgb(132, 209, 114, .7)"
+	}
+
+	inp_zipcode.addEventListener('input', function(){
+		reset_zipcode_button()
+		//include hyphen error message or hyphen split 
+	})
+
+
+	function validate(){
 		if(/^\d{5}(-\d{4})?$/.test(inp_zipcode.value)){//function validates zipcode with or without -
 			if(deliverables.includes(String(inp_zipcode.value))){
 				button_zipcode.innerHTML = "We Do!"
@@ -180,10 +291,11 @@
 		}else{
 			button_zipcode.innerHTML = "Please Enter A Valid Zip Code"
 			button_zipcode.style.backgroundColor = "rgb(255, 1, 1, .6)"
-			
-		}	
+		}
 		
 	}
+
+
 
 
 </script>

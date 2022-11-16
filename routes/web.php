@@ -44,3 +44,7 @@ Route::get('/faq', function () {
 Route::get('/stores', function () {
     return view('store_locations');
 });
+
+Route::get('/coaching', function () {
+    return view('nutrition_coaching');
+});

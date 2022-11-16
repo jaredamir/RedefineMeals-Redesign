@@ -49,7 +49,7 @@ div.about_us-header h1{
 div.about_us{
     display: inline-flex;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
@@ -64,6 +64,7 @@ div.about_us img{
     height: 45vh;
     min-height: 400px;
     min-width: 230px;
+    border-radius: 5px;
 }
 
 div.about_us-caption{
@@ -216,10 +217,12 @@ div.heading h1{
 
     div.about_us-caption h3{
         font-size: 3vw;
+        text-align: center;
     }
 
     div.about_us-caption h2{
         font-size: 5vw;
+        text-align: center;
     }
 
     div.about_us img{
@@ -268,10 +271,12 @@ div.heading h1{
 
     div.about_us-caption h3{
         font-size: 3vw;
+        text-align: left;
     }
 
     div.about_us-caption h2{
         font-size: 4vw;
+        text-align: left;
     }
     div.about_us img{
         width: 35vw;
@@ -324,7 +329,7 @@ div.heading h1{
     </div>
 </div>
 
-<div class="about_us" style="flex-wrap: wrap-reverse;">    
+<div class="about_us" style="flex-wrap: wrap-reverse; margin-bottom: 200px;">    
     <div class="about_us-caption" data-aos="fade-right"><h3>At Redefine Meals, we believe that fueling potential starts with what we put in our bodies. That is why we developed a menu of over <strong>65 balanced, nutrient dense meals</strong> to make eating healthy easy. We take all the preparation out of eating healthy delicious food, so you have time to get to where you're going</h3>
         <i class="about_us-accent"></i>
     </div>
@@ -387,7 +392,7 @@ div.heading h1{
         
     window.addEventListener('scroll', () => {
         //each card is instantiated here (it is placed in the event function so that the placement is updated on window resize)
-        
+
         //while the rate can be customzied invidially, it was set to .001 so each card has a the same rate since they are all the same height on this page
         set_rate = .001
 

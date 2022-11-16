@@ -44,6 +44,42 @@
             margin: 0px 0px;
            }
 
+           div.heading{
+                height: fit-content;
+                width: 100%;
+                padding: 50px 20px;
+                background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+              background-position: center center;
+              margin-right: 0px;
+              margin-bottom: 40px;
+
+                box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.15);
+
+            }
+
+            div.heading h1{
+                font-size: 10vw;
+                color: darkslategray;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 100;
+                text-align: center;
+
+            } 
+
+            div.heading p{
+                font-size: 20;
+                text-align: center;
+                color: grey;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                
+
+                margin-bottom: 10px;
+            }
+           
            .navbar{
             position: absolute;  
             top: 0px;
@@ -110,19 +146,35 @@
     </head>
     <body>
 
-            <button class="navbar-dropdown" onclick="dropdown()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <button class="navbar-dropdown" data-bs-toggle="offcanvas" data-bs-target="#navoffcanvas" aria-controls="navoffcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg></button>
 
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="navoffcanvas" aria-labelledby="navoffcanvasLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="navoffcanvasLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                  
+                </div>
+              </div>
+            </div>
+
             <div class="navbar" id="nav1">
                 <a href="/">Home</a>
-                <a href="/menu">Menu</a>
                 <a href="/testimonials">Reviews</a>
                 <a href="/aboutus">About Us</a>
                 <a href="/giftcards">Gift Cards</a>
                 <a href="/meettheteam">MTT</a>
                 <a href="/faq">FAQ</a>
                 <a href="/stores">Stores</a>
+                <a href="/coaching">Coach</a>
             </div>
             <noscript>Please Enable Javascript In Your Browser To View This Page</noscript>
             @yield('content')

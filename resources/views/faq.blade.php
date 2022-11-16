@@ -36,7 +36,7 @@
   <div class="faq-header" data-aos="fade-down">
   	<h1>FAQ</h1>
   </div>
-  
+
 
 
 </div>
@@ -46,7 +46,7 @@
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        message: 
       }
     }
   }).mount('#app')

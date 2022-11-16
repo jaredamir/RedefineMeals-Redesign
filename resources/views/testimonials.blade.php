@@ -367,7 +367,7 @@ svg:nth-child(5){
 				display: none;
 			}
 			div.qr-code h1{
-				font-size: 15vw;
+				font-size: 12vw;
 			}
 
 			div.reviews_section-header h1{ /* at below mobile view the font size stays fized at 60px */
@@ -554,7 +554,7 @@ svg:nth-child(5){
 				transform: scale(1.1);
 			}
 			div.qr-code h1{
-				font-size: 10vw;
+				font-size: 8vw;
 			}
 
 			div.reviews_section-header h1{ /* above mobile view the font size changes with the screen size */
