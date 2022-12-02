@@ -34,6 +34,7 @@
     margin: 60px 0px;
     height: fit-content;
   }
+
   div.nutrition_section{
     position: absolute;
     width: 100vw;
@@ -48,16 +49,17 @@
   }
   
   div.nutrition_section img{
-    width: 30%;
+    width: 35%;
     height: auto;
   }
 
   div.nutrition_section > div.nutrition_body{
     width: 50%;
-    height: 43vw;
+    height: 45vw;
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
   }
   div.nutrition_body > div.nutrition_header{
     width: 100%;
@@ -87,7 +89,7 @@
 
   div.nutrition_body > div.nutrition_footer{
       width: 100%;
-      height: 20%;
+      height: 15%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -162,6 +164,12 @@
     div.nutrition_section{
       flex-direction: column;
     }
+    div.nutrition_section > div.nutrition_body{
+      width: 70%;
+      height: fit-content;
+      margin: 20px 0px;
+      justify-content: space-between;
+    }
   }
 
 
@@ -169,6 +177,12 @@
   @media only screen and (min-width: 768px){
     div.nutrition_section{
       flex-direction: row;
+    }
+    div.nutrition_section > div.nutrition_body{
+      width: 50%;
+      height: 45vw;
+      margin: 20px 0px;
+      justify-content: space-between;
     }
   }
 
@@ -187,7 +201,7 @@
     <div class="nutrition_body" style="justify-content: space-between;">
       <h1>Ashley Vadasz</h1>
       <div class="nutrition_bio">
-        <h2>Ashley Vadasz is a Marine Corps Veteran and private practice Registered Dietitian/Nutritionist (RDN) specializing in sports and performance nutrition. Ashley is passionate about fueling athletes and individuals trying to take control of their health. She believes that food and movement truly are medicine-they should be enjoyed and cherished. Ashley takes a holistic and functional approach or “whole systems approach” to create personalized nutrition care plans for her clients.  She believes food and movement represent nourishment, culture and connection, and ultimately longevity. She teaches her clients how navigate the confusing world of nutrition to fuel for optimal health and performance. Ashley earned her undergraduate degree in Nutrition and Dietetics from Long Island University and is currently finishing her master’s degree at Stony Brook University in Integrative and Functional Nutrition. Ashley resides in Port Jefferson and when she is not working with her clients, she loves spending time being active outdoors. </h2>
+        <h2 style="line-height: 200%;">Ashley Vadasz is a Marine Corps Veteran and private practice Registered Dietitian/Nutritionist (RDN) specializing in sports and performance nutrition. Ashley is passionate about fueling athletes and individuals trying to take control of their health. She believes that food and movement truly are medicine-they should be enjoyed and cherished. Ashley takes a holistic and functional approach or “whole systems approach” to create personalized nutrition care plans for her clients.  She believes food and movement represent nourishment, culture and connection, and ultimately longevity. She teaches her clients how navigate the confusing world of nutrition to fuel for optimal health and performance. Ashley earned her undergraduate degree in Nutrition and Dietetics from Long Island University and is currently finishing her master’s degree at Stony Brook University in Integrative and Functional Nutrition. Ashley resides in Port Jefferson and when she is not working with her clients, she loves spending time being active outdoors. </h2>
         
       </div>
       <div class="nutrition_footer">

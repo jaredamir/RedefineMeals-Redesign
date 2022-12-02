@@ -3,6 +3,13 @@
 @section('content')
 <style type="text/css">
 
+div.about_us-container{
+    width: 100%; 
+    height: fit-content; 
+    overflow: hidden; 
+    position: relative;
+}
+
 div.whitespace{
     display: block;
     width: 100%;
@@ -316,56 +323,55 @@ div.heading h1{
 
 
 
+<div class="about_us-container">
+    <div class="about_us-header" data-aos="fade-down">
+        <h1>ABOUT US</h1>
+    </div>
 
-<div class="about_us-header" data-aos="fade-down">
-    <h1>ABOUT US</h1>
+
+    <div class="about_us">
+        <img src="{{url('/images/Redefine_shirt-vertical.jpg')}}" data-aos="fade-right">
+        <div class="about_us-caption" data-aos="fade-left"><h2>OUR STORY</h2><br><h3>Redefine Meals was founded in 2016 by Matthew Riss and Mark Ciaburri who together had one goal in mind, to provide <strong>easy access to healthy food</strong> through meal prep</h3>
+            <i class="about_us-accent"></i>
+        </div>
+    </div>
+
+    <div class="about_us" style="flex-wrap: wrap-reverse; margin-bottom: 200px;">    
+        <div class="about_us-caption" data-aos="fade-right"><h3>At Redefine Meals, we believe that fueling potential starts with what we put in our bodies. That is why we developed a menu of over <strong>65 balanced, nutrient dense meals</strong> to make eating healthy easy. We take all the preparation out of eating healthy delicious food, so you have time to get to where you're going</h3>
+            <i class="about_us-accent"></i>
+        </div>
+        <img src="{{url('/images/RedefineMeals_Apr22-3545.jpg')}}" data-aos="zoom-out">
+    </div>
+
+
+
+        <div class="page-header" data-aos="fade-in">
+            <h1>OUR VALUES<br><i class="arrow-down"></i></h1>
+        </div>
+
+        <div class="value_card" id="card1">
+            <h1>HEALTHY</h1>
+            <h3>Our food is made <strong>Fresh</strong> 100% of the time, using <strong>Simple Whole Ingredients</strong> that keep your body and mind moving positively throughout the day</h3>
+            <i class="arrow-down"></i>
+        </div>
+        <div class="value_card" id="card2">    
+            <h1 style="color:white">CONVENIENT</h1>
+            <h3 style="color:white">Diet plays a major part in living a <strong style="color:#cbe8bc">Happy and Healthy life,</strong> and we make that <strong style="color:#cbe8bc">Easy</strong> by cooking for you, how you want, when you want</h3>
+            <i class="arrow-down" style="border-color: white;"></i>
+        </div>
+        <div class="value_card" id="card3">    
+            <h1>INNOVATIVE</h1>
+            <h3>We aren't afraid to <strong>Try New Things!</strong> Our menu lineup always features popular food favorites Reinvented to satisfy your tastebuds <strong>Without Sacraficing Your Health Goals</strong></h3>
+        </div> 
+
+        
+        <div class="whitespace"></div>
+
+
+    <div class="values_card-background" id="card1-background" style="background-color: #cbe8bc"></div>
+    <div class="values_card-background" id="card2-background" style="background-color: darkslategrey;"></div>
+    <div class="values_card-background" id="card3-background" style="background-color: #f2eee2;"></div>
 </div>
-
-
-<div class="about_us">
-    <img src="https://redefinemeals.com/storage/photos/15/Redefine_shirt-vertical.jpg" data-aos="fade-right">
-    <div class="about_us-caption" data-aos="fade-left"><h2>OUR STORY</h2><br><h3>Redefine Meals was founded in 2016 by Matthew Riss and Mark Ciaburri who together had one goal in mind, to provide <strong>easy access to healthy food</strong> through meal prep</h3>
-        <i class="about_us-accent"></i>
-    </div>
-</div>
-
-<div class="about_us" style="flex-wrap: wrap-reverse; margin-bottom: 200px;">    
-    <div class="about_us-caption" data-aos="fade-right"><h3>At Redefine Meals, we believe that fueling potential starts with what we put in our bodies. That is why we developed a menu of over <strong>65 balanced, nutrient dense meals</strong> to make eating healthy easy. We take all the preparation out of eating healthy delicious food, so you have time to get to where you're going</h3>
-        <i class="about_us-accent"></i>
-    </div>
-    <img src="https://redefinemeals.com/storage/photos/15/RedefineMeals_Apr22-3545.jpg" data-aos="zoom-out">
-</div>
-
-
-
-    <div class="page-header" data-aos="fade-in">
-        <h1>OUR VALUES<br><i class="arrow-down"></i></h1>
-    </div>
-
-    <div class="value_card" id="card1">
-        <h1>HEALTHY</h1>
-        <h3>Our food is made <strong>Fresh</strong> 100% of the time, using <strong>Simple Whole Ingredients</strong> that keep your body and mind moving positively throughout the day</h3>
-        <i class="arrow-down"></i>
-    </div>
-    <div class="value_card" id="card2">    
-        <h1 style="color:white">CONVENIENT</h1>
-        <h3 style="color:white">Diet plays a major part in living a <strong style="color:#cbe8bc">Happy and Healthy life,</strong> and we make that <strong style="color:#cbe8bc">Easy</strong> by cooking for you, how you want, when you want</h3>
-        <i class="arrow-down" style="border-color: white;"></i>
-    </div>
-    <div class="value_card" id="card3">    
-        <h1>INNOVATIVE</h1>
-        <h3>We aren't afraid to <strong>Try New Things!</strong> Our menu lineup always features popular food favorites Reinvented to satisfy your tastebuds <strong>Without Sacraficing Your Health Goals</strong></h3>
-    </div> 
-
-    
-    <div class="whitespace"></div>
-
-
-<div class="values_card-background" id="card1-background" style="background-color: #cbe8bc"></div>
-<div class="values_card-background" id="card2-background" style="background-color: darkslategrey;"></div>
-<div class="values_card-background" id="card3-background" style="background-color: #f2eee2;"></div>
-    
-
 
 
 <!--<script src="{{url('js/aboutUs.js')}}"></script>-->

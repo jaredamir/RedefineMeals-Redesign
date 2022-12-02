@@ -288,26 +288,6 @@ svg:nth-child(5){
 /*###*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Testimonial Card Below Mobile Width View*/
 @media only screen and (min-width: 1px){
 			div.testimonial_container-mobile-tablet{
@@ -330,9 +310,7 @@ svg:nth-child(5){
 				border-radius: 2px;
 
 				display: inline-flex;
-				flex-direction: column;
-
-				
+				flex-direction: column;		
 			}
 
 			.testimonial_card-thin img{

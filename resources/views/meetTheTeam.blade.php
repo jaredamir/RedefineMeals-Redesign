@@ -79,6 +79,7 @@
 		width: auto;
 		position: relative;
 		transition: all .2s ease-in-out;
+		cursor: pointer
 	}
 	div.highlight_container{
 		display: none;
@@ -104,24 +105,6 @@
 		text-align: center;	
 	}
 
-	@keyframes member_highlight-animation{
-		0%{background-color: red;}
-		100%{background-color: blue;}
-		/*
-		0%{
-			transform: scale(0.0);
-			border-radius: 50;
-		}50%{
-			transform: scale(.5);
-			border-radius: 25;
-		}100%{
-			transform: scale(1.0);
-			border-radius: 0;
-		}
-		*/
-	}
-
-
 
 	/* Captions */
 	div.team_caption-container{
@@ -137,7 +120,6 @@
 		width: 100%;
 		height: 100%;
 		padding: 70px 150px;
-		will-change: display;
 	}
 	div.team_caption h2{ /*Member Title*/
 		font-weight: 300;
@@ -163,11 +145,11 @@
 	div.team_caption-container > div.team_caption{
 		padding: 70px 40px;
 	}
-	div.member img:hover{
-		transform: none;
-	}
 	h1.read_story::after{
 		display: block;
+	}
+	div.member img{
+		height: 350px;
 	}
 }
 
@@ -175,23 +157,19 @@
 	div.team_members{
 		overflow-x: visible;
 	}
-	div.member img:hover{
-		transform: scale(1.1);
-	}
 	div.team_caption-container > div.team_caption{
 		padding: 70px 150px;
 	}
 	h1.read_story::after{
 		display: none;
 	}
+	div.member img{
+		height: 500px;
+	}
 
 }
 
 </style>
-<script src="https://unpkg.com/vue@3"></script>
-
-
-
 
 <div class="mtt-header" data-aos="fade-down">
 	<h1>MEET THE TEAM</h1>
@@ -256,7 +234,6 @@
 		<h4>Mark discovered his passion for nutrition at young age, cooking since he was tall enough to reach the counter. He attributes his creativity and love for food to his family who owned a bakery in Brooklyn and taught him how to cook traditional Italian recipes from an early age.  At 19, while playing soccer and studying Nutrition and Dietetics at Buffalo State, Mark along with best friend Matt Riss founded Redefine Meals.  He quickly learned the ins and outs of building an idea into a business and working tirelessly to make it a huge success. During the early years, Mark worked every functioning role at the company, but now the kitchen remains his number one focus and passion.  That is why each and every meal on Redefine’s menu is a personal labor of love, and reflective of his belief in proper nutrition. Mark has dedicated his life to making healthy, delicious food using simple homemade ingredients that improves people’s lives from the inside out. </h4>
 	</div>
 
-
 <script type="text/javascript">
 	class TeamMember {
 		constructor(name_id){
@@ -273,7 +250,6 @@
 		showMember(){
 			this.highlight.style.display = 'block'
 			this.caption.style.display = 'block'
-			this.highlight.style.animation = 'member_highlight-animation 2s forwards'
 		}
 	}
 
@@ -293,7 +269,7 @@
 		for(let i = 0; i < members_list.length; i++){
 			if (members_list[i].name==member_name){
 				members_list[i].showMember()
-				members_list[i].caption.scrollIntoView()
+				members_list[i].caption.scrollIntoView(true, "smooth")
 			}else{
 				members_list[i].hideMember()
 			}

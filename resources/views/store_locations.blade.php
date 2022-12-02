@@ -373,37 +373,43 @@ div.otf_card button{
 					<h2>Lake Grove, NY</h2>
 					<h3>1015 Hawkins Ave, Lake Grove, NY 11755</h3>
 					<h3>(631) 800-8199</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=1015+Hawkins+Ave%2C+Lake+Grove%2C+NY+11755&oq=1015+Hawkins+Ave%2C+Lake+Grove%2C+NY+11755&aqs=chrome..69i57j33i299l2.992j0j15&sourceid=chrome&ie=UTF-8"><button>View More</button></a>
 				</div>
 				<div class="location_item">
 					<h2>Bellmore, NY</h2>
 					<h3>2693 Merrick Rd, Bellmore, NY 11710</h3>
 					<h3>(516) 804-8472</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=2693+Merrick+Rd%2C+Bellmore%2C+NY+11710&sxsrf=ALiCzsaa1I6NpWUWutsNEEbfFI0ytt491g%3A1669911353940&ei=OdOIY-L2OPLLytMPl-Ke-A4&ved=0ahUKEwii97rI6Nj7AhXypXIEHRexB-8Q4dUDCBA&uact=5&oq=2693+Merrick+Rd%2C+Bellmore%2C+NY+11710&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzICCCZKBAhBGABKBAhGGABQAFgAYOkKaABwAXgAgAGGAYgBhgGSAQMwLjGYAQCgAQKgAQHAAQE&sclient=gws-wiz-serp"><button>View More</button></a>
 				</div>
 				<div class="location_item">
 					<h2>Commack, NY</h2>
 					<h3>63 Commack Rd, Commack, NY 11725</h3>
 					<h3>(631) 623-6643</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=63+Commack+Rd%2C+Commack%2C+NY+11725&sxsrf=ALiCzsZdYbPsyhgl3_qWLmPp9mMBWJEhkw%3A1669911887871&ei=T9WIY4neNJCu5NoP-8CPOA&ved=0ahUKEwjJwYfH6tj7AhUQF1kFHXvgAwcQ4dUDCBA&uact=5&oq=63+Commack+Rd%2C+Commack%2C+NY+11725&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzICCCZKBAhBGABKBAhGGABQAFgAYJcGaABwAXgAgAFhiAFhkgEBMZgBAKABAqABAcABAQ&sclient=gws-wiz-serp"><button id="store_name">View More</button></a>
 				</div>
 				<div class="location_item">
 					<h2>Port Jefferson, NY</h2>
 					<h3>5090 Nesconset Highway, Port Jefferson Station, NY 11776</h3>
 					<h3>(631) 828-2287</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=5090+Nesconset+Highway%2C+Port+Jefferson+Station%2C+NY+11776&sxsrf=ALiCzsZAH4azN-83u7mVSYs2HJmHd79P0Q%3A1669911927228&ei=d9WIY7GuDaSr5NoP4uGF2A8&ved=0ahUKEwjxxenZ6tj7AhWkFVkFHeJwAfsQ4dUDCBA&uact=5&oq=5090+Nesconset+Highway%2C+Port+Jefferson+Station%2C+NY+11776&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzICCCZKBAhBGABKBAhGGABQAFgAYN4GaABwAHgAgAGJAYgBiQGSAQMwLjGYAQCgAQKgAQHAAQE&sclient=gws-wiz-serp"><button id="store_name">View More</button></a>
 				</div>
 				<div class="location_item">
 					<h2>Syosset, NY</h2>
 					<h3>503 Jericho Turnpike, Syosset, NY 11791</h3>
 					<h3>(516) 584-6848</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=503+Jericho+Turnpike%2C+Syosset%2C+NY+11791&sxsrf=ALiCzsZc1NzHv4OENei9SkbvW78KjkTSPQ%3A1669912093389&ei=HdaIY56nF7PSytMPpbOckA8&ved=0ahUKEwjeqYep69j7AhUzqXIEHaUZB_IQ4dUDCBA&uact=5&oq=503+Jericho+Turnpike%2C+Syosset%2C+NY+11791&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzICCCYyAggmSgQIQRgBSgQIRhgAUMwIWMwIYPYPaARwAHgAgAFjiAFjkgEBMZgBAKABAqABAcABAQ&sclient=gws-wiz-serp"><button id="store_name">View More</button></a>
 				</div>
 				<div class="location_item">
 					<h2>Babylon, NY</h2>
 					<h3>255 Deer Pk Ave, Babylon, NY 11702</h3>
 					<h3>(631) 526-9071</h3>
-					<button id="store_name">View More</button>
+					<a href="https://www.google.com/search?q=255+Deer+Pk+Ave%2C+Babylon%2C+NY+11702&sxsrf=ALiCzsaQ6dR6XGEiY9468K_JZ6indoYs4w%3A1669912123290&ei=O9aIY8KpEemzytMP25OoSA&ved=0ahUKEwiCs6i369j7AhXpmXIEHdsJCgkQ4dUDCBA&uact=5&oq=255+Deer+Pk+Ave%2C+Babylon%2C+NY+11702&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzICCCZKBAhBGABKBAhGGABQAFgAYNMGaABwAHgAgAFmiAFmkgEDMC4xmAEAoAECoAEBwAEB&sclient=gws-wiz-serp"><button id="store_name">View More</button></a>
+				</div>
+				<div class="location_item">
+					<h2>Patchogue, NY</h2>
+					<h3>73 North Ocean Avenue Suite A, Patchogue, NY 11772</h3>
+					<h3>(631) 730-1472</h3>
+					<a href="https://www.google.com/search?q=73+North+Ocean+Avenue+Suite+A%2C+Patchogue%2C+NY+11772&sxsrf=ALiCzsb0t97mh77hNlVilrEJfjVRb-QTvw%3A1669912144880&ei=UNaIY7qqNYSYytMPt-6H6A4&ved=0ahUKEwi6ks7B69j7AhUEjHIEHTf3Ae0Q4dUDCBA&uact=5&oq=73+North+Ocean+Avenue+Suite+A%2C+Patchogue%2C+NY+11772&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCCEQqwIyCAghEBYQHhAdSgQIQRgASgQIRhgAUABYAGDrBWgAcAB4AIABqQGIAakBkgEDMC4xmAEAoAECoAEBwAEB&sclient=gws-wiz-serp"><button id="store_name">View More</button></a>
 				</div>
 
 			</div>
@@ -411,17 +417,17 @@ div.otf_card button{
 	</div>
 
 	<div class="otf_section">
-		<div class="otf_header">
+		<div class="otf_header" data-aos="fade-in">
 			<img src="{{url('/images/OTF_logo.png')}}">
 			<h1>Orange Theory Fitness</h1>
 		</div>
-		<div class="otf_bio"><h2>Redefine Meals and Orange Theory fitness came together in the Winter of 2020 to deliver exclusive benefits to members in their 16 Long Island locations. From exclusive discounts to tablings and tastings.</h2></div>
-		<h1>Partnering Locations</h1>
-		<div class="otf_locations">
+		<div class="otf_bio" data-aos="fade-in"><h2>Redefine Meals and Orange Theory fitness came together in the Winter of 2020 to deliver exclusive benefits to members in their 16 Long Island locations. From exclusive discounts to tablings and tastings.</h2></div>
+		<h1 data-aos="fade-in">Partnering Locations</h1>
+		<div class="otf_locations" data-aos="fade-up">
 			<div class="otf_card">
 				<h3>Unique Fitness Farmingville</h3>
-				<h4>1191 Portion Road, Farmingville, NY 11738</h4>
-				<button>View More</button>
+				<h4>1191 Portion Rd, Farmingville, NY 11738</h4>
+				<button href="">View More</button>
 			</div>
 			<div class="otf_card">
 				<h3>Unique Fitness Holbrook</h3>
@@ -452,6 +458,8 @@ div.otf_card button{
 	//Add markers to the map
 	let lake_grove = L.marker([40.852940, -73.114910]).addTo(myMap);
 	let port_jeff = L.marker([40.922430, -73.050470]).addTo(myMap);
+
+	port_jeff.setOpacity(.5)
 
 	//pop ups for the markers
 	lake_grove.bindPopup("<b>Lake Grove</b>");

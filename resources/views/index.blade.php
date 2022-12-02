@@ -262,11 +262,12 @@
 		</div>
 	</div>
 </div>
-
+<script type="text/javascript" src="{{url('/js/zipcodes.js')}}"></script>
 <script type="text/javascript">
+	console.log(zipcode_json)
 	let inp_zipcode = document.getElementById('zipcode')
 	let button_zipcode = document.getElementById("zipcode_button")
-	const deliverables = ['07020', '11733', '10956', '37690']
+	const deliverables = []//['07020', '11733', '10956', '37690']
 
 	function reset_zipcode_button(){
 		button_zipcode.innerHTML = "Find Out"
@@ -280,7 +281,7 @@
 
 
 	function validate(){
-		if(/^\d{5}(-\d{4})?$/.test(inp_zipcode.value)){//function validates zipcode with or without -
+		if(/^\d{5}(-\d{4})?$/.test(inp_zipcode.value)){//function validates zipcode with or without - | if its a valid zipcode, continues to check list
 			if(deliverables.includes(String(inp_zipcode.value))){
 				button_zipcode.innerHTML = "We Do!"
 				button_zipcode.style.backgroundColor = "rgb(132, 209, 114, .7)"
@@ -290,7 +291,7 @@
 			}
 		}else{
 			button_zipcode.innerHTML = "Please Enter A Valid Zip Code"
-			button_zipcode.style.backgroundColor = "rgb(255, 1, 1, .6)"
+			button_zipcode.style.backgroundColor = "rgb(255, 1, 1, .6)" 
 		}
 		
 	}

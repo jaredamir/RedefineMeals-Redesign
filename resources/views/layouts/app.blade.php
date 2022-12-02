@@ -44,7 +44,7 @@
             margin: 0px 0px;
            }
 
-           div.heading{
+           div.site_header{
                 height: fit-content;
                 width: 100%;
                 padding: 50px 20px;
@@ -60,7 +60,7 @@
 
             }
 
-            div.heading h1{
+            div.site_header h1{
                 font-size: 10vw;
                 color: darkslategray;
                 font-family: 'Roboto', sans-serif;
@@ -69,7 +69,7 @@
 
             } 
 
-            div.heading p{
+            div.site_header p{
                 font-size: 20;
                 text-align: center;
                 color: grey;
@@ -79,7 +79,7 @@
 
                 margin-bottom: 10px;
             }
-           
+
            .navbar{
             position: absolute;  
             top: 0px;

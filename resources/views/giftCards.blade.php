@@ -74,7 +74,7 @@
 		right: -10%;
 		top: 15%;
 
-		background: radial-gradient(24.47% 59.71% at 77.16% 63.14%, #FFFFFF 0%, #EDEAEA 61.61%, #FFFFFF 100%);
+		background: radial-gradient(24.47% 59.71% at 77.16% 63.14%, #FFFFFF 0%, #EDEAEA 51.61%, #FFFFFF 100%);
 		background-image: url("{{url('/images/Redefine_leaf_hd.jpg')}}");
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -103,12 +103,12 @@
 	div.checkout > div.header h3{
 		font-family: "Roboto";
 		font-weight: 300;
-		margin: 20px 10px;
+		margin: 20px 20px;
 	}
 
 	div.checkout > div.giftCard_list{
 		width: 100%;
-		height: 70%;
+		height: 80%;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -116,39 +116,6 @@
 		align-items: center;
 		justify-content: space-evenly;
 	}
-
-	div.checkout > div.footer{
-		display: flex;
-		flex-wrap: nowrap;
-		width: 100%;
-		height: 20%;
-		border-top: 1px solid #CCCCCC;
-		align-items: center;
-		justify-content: center;
-	}
-	div.checkout > div.footer button{
-		width: 35vw;
-		min-width: 200px;
-		height: 70px;
-		left: 101px;
-		top: 866px;
-		border: none;
-		background-color: #86D172;
-		border-radius: 5px;
-		color: white;
-		font-family: "Roboto";
-		font-weight: 100;
-		font-size: 30px;
-	}
-
-
-
-
-
-
-
-
-
 
 
 /*mobile view*/
@@ -216,7 +183,6 @@
 	<div class="checkout" data-aos="fade-in">
 		<div class="header"><h3>Choose Amount</h3></div>
 		<div class="giftCard_list"></div>
-		<div class="footer"><button>ADD TO CART</button></div>
 	</div>
 </div>
 
