@@ -2,14 +2,35 @@
 
 @section('content')
 <style type="text/css">
+	div.homepage-container{
+	    width: 100%; 
+	    height: fit-content; 
+	    overflow: hidden; 
+	    position: relative;
+	}
+
+
 	div.videoBanner{
 		display: block;
 		width: 100%;
 		height: 100vh;
 		position: relative;
+		display: flex;
+	   	justify-content: center;
+	   	align-items: center;
+	   	overflow: hidden;
+	}
+	div.videoBanner img.backup_image{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+    	transform: translate(-50%, 0);
+		width: auto;
+		height: 100vh;
+		z-index: -2;
 	}
 
-	div.videoBanner div.homeUI{
+	div.videoBanner > div.homeUI{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -48,11 +69,9 @@
 	}
 
 	#homePageVideo{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
+		position: relative;
+		width: auto;
+		height: 100%;
 	}
 
 
@@ -63,8 +82,6 @@
 		align-items: center;
 		width: 100vw;
 		height: 100vh;
-		border: 1px solid lightgray;
-		
 	}
 	div.deliver{
 		position: relative;
@@ -109,7 +126,7 @@
 		height: 60px;
 		border: 1px solid lightgray;
 		border-radius: 7px;
-		padding: 1px 10px;
+		padding: 1px 20px;
 
 		font-family: "Roboto";
 		font-weight: 100;
@@ -137,11 +154,17 @@
 	}
 
 	/*How it works*/
+	div.hiw-header h1{
+		font-family: 'Roboto';
+		font-weight: 100;
+		text-align: center;
+		font-size: 7vw;
+	}
 	div.instructions_section{
 		position: relative;
 		width: 100vw;
-		height: 50vw;
-		border: 1px solid lightgray;
+		height: 55vw;
+		border-bottom: 1px solid lightgray;
 	}
 	div.instructions_section > div.instruction_slide{
 		overflow: hidden;
@@ -177,6 +200,22 @@
 		font-weight: 100;
 		font-size: 3vw;
 	}
+	div.instruction_slide button{
+		background: transparent;
+		background-color: rgb(132, 209, 114, .7);
+		border: none;
+		font-family: 'Roboto';
+		font-weight: 100;
+		text-align: center;
+		font-size: 2vw;
+		color: white;
+		width: fit-content;
+		height: fit-content;
+		padding: 20px 40px;
+		border-radius: 2px;
+		margin-top: 50px;
+	}
+
 	div.slide_index{
 		display: flex;
 		justify-content: center;
@@ -187,43 +226,392 @@
 		background-color: rgb(132, 209, 114, .7);
 		color: white;
 		margin: 0px 20px;
+		text-align: center;
 	}
 	div.slide_body img{
 		border-radius: 20px;
 		width: auto;
 		height: 40vw;
-		margin-left:50px;
+		margin-left: 50px;
+	}
+	div.slide_body > div.slide_video{
+		border-radius: 20px;
+		width: auto;
+		height: 40vw;
+		margin-left: 50px;
+		overflow: hidden;
+	}
+	div.slide_video > img.backup_image{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+    	transform: translate(-50%, 0);
+		border-radius: 20px;
+		width: auto;
+		height: 40vw;
+		margin-left: 50px;
+		z-index: -2;
+	}
+
+	div.quote_section{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		margin: 50px 0px;
+	}
+
+	.translated_right{
+		transform: translateX(-100px);
+	}
+	.translated_left{
+		transform: translateX(90px);
+	}
+	.flex_reverse{
+		flex-direction: row-reverse;
 	}
 
 
+	div.quote_section > img.fnf{
+		height: 55vw;
+		width: auto;
+		filter: drop-shadow(17px 8px 15px rgba(0, 0, 0, 0.25)) drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.25));
+	}
+	div.quote_section > img.hms{
+		height: 55vw;
+		width: auto;
+	}
+
+	div.quote_section > div.quote_text-container{
+		width: 50vw;
+		height: fit-content;
+		padding: 70px 30px;
+		margin: 10px 30px;
+	}
+	div.quote_text-container h1{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 7vw;
+		text-align: center;
+	}
+	div.quote_text-container h2{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 4vw;
+		text-align: center;
+	}
+
+	div.section_title{
+		width: 100%;
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 100px 0px;
+		padding: 0px 40px;
+	}
+	div.section_title h1{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 5vw;
+		text-align: left;
+	}
+	div.section_title h2{
+		font-family: 'Roboto';
+		font-weight: 100;
+		font-size: 3vw;
+		text-align: center;
+	}
+
+	div.gallery_section{
+		width: 100vw;
+		height: fit-content;
+		display: flex;
+		justify-content: space-between;
+		column-gap: 15px;
+		margin: 50px 0px;
+	}
+	
+	div.gallery_section > div.gallery_column{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		width: 25%;
+	}
+	div.gallery_column img{
+		width: 100%;
+		height: auto;
+		margin: 15px 0px;
+	}
+	div.gallery_column source{
+		width: 100%;
+		height: auto;
+		margin: 15px 0px;
+	}
+
+	#GreekAnimation{
+		border-radius: 20px;
+		width: auto;
+		height: 40vw;
+		margin-left: 50px;
+	}
+	div.gallery_group{
+		width: 100vw;
+		height: fit-content;
+		display: flex;
+		justify-content: space-between;
+		column-gap: 15px;
+	}
+
+
+	/*Mobile and Table*/
+	@media only screen and (min-width: 1px){
+		div.homeUI h1{
+			font-size: 9vw;
+		}
+
+		div.homeUI > button.order{
+			font-size:4vw;
+		}
+		.translated_right{
+			transform: translateX(0px);
+		}
+		.translated_left{
+			transform: translateX(0px);
+		}
+		div.section_title h2{
+			font-size: 6vw;
+		}
+		div.gallery_section{
+			flex-direction: column;
+			margin: 20px 0px;
+		}
+		div.quote_section{
+			flex-direction: column;
+			margin: 30px 0px;
+		}
+		div.quote_section > div.quote_text-container{
+			width: 100vw;
+			height: fit-content;
+			padding: 0px 10px;
+			margin: 20px 30px;
+		}
+		div.quote_section > img.fnf{
+			height: auto;
+			width: 80vw;
+		}
+		div.quote_section > img.hms{
+			height: auto;
+			width: 90vw;
+		}
+		div.quote_text-container h2{
+			font-size: 6vw;
+		}
+		div.section_title h1{
+			font-size: 7vw;
+		}
+		div.instructions_section > div.instruction_slide{
+			padding: 10px 30px;
+		}
+		div.instructions_section{
+			height: 80vw;
+		}
+		div.instruction_slide button{
+			font-size: 3.5vw;
+			padding: 15px 20px;
+			margin-top: 30px;
+		}
+		div.slide_index{
+			margin: 0px 5px;
+		}
+		div.deliver_section{
+			height: 80vh;
+		}
+		div.deliver_ui h1{
+			font-size: 8vw;
+		}
+		div.deliver_ui h3{
+			font-size: 4vw;
+		}
+		div.deliver_ui button{
+			font-size: 3vw;
+		}
+		div.deliver_ui input{
+			width: 90%;
+			height: 50px;
+			font-size: 3vw;
+		}
+		div.slide_body img{
+			border-radius: 10px;
+		}
+	}
+
+
+	/*Desktop*/
+	@media only screen and (min-width: 768px){
+		div.homeUI h1{
+			font-size: 6vw;
+		}
+
+		div.homeUI > button.order{
+			font-size: 2vw;
+		}
+		.translated_right{
+			transform: translateX(-100px);
+		}
+		.translated_left{
+			transform: translateX(90px);
+		}
+		div.section_title h2{
+			font-size: 3vw;
+		}
+		div.gallery_section{
+			flex-direction: row;
+			margin: 50px 0px;
+		}
+		div.quote_section{
+			flex-direction: row;
+			margin: 50px 0px;
+		}
+		div.quote_section > img.fnf{
+			height: 55vw;
+			width: auto;
+		}
+		div.quote_section > img.hms{
+			height: 55vw;
+			width: auto;
+		}
+		div.quote_text-container h2{
+			font-size: 4vw;
+		}
+		div.section_title h1{
+			font-size: 5vw;
+		}
+		div.instructions_section{
+			height: 55vw;
+		}
+		div.instructions_section > div.instruction_slide{
+			padding: 40px 100px;
+		}
+		div.instruction_slide button{
+			font-size: 2vw;
+			padding: 20px 40px;
+			margin-top: 50px;
+		}
+		div.slide_index{
+			margin: 0px 20px;
+		}
+		div.deliver_section{
+			height: 100vh;
+			
+		}
+		div.deliver_ui h1{
+			font-size: 6vw;
+		}
+		div.deliver_ui h3{
+			font-size: 2vw;
+		}
+		div.deliver_ui button{
+			font-size: 1.5vw;
+		}
+		div.deliver_ui input{
+			width: 40%;
+			height: 60px;
+			font-size: 1.5vw;
+		}
+		div.slide_body img{
+			border-radius: 20px;
+		}
+
+	}
+
+
+
 </style>
-<div class="videoBanner" data-aos="fade-in">
-	<video autoplay muted loop id="homePageVideo">
+
+<div class="homepage-container">
+<div class="videoBanner" data-aos="fade-in" id="homepagevideo">
+	<video autoplay muted loop id="homePageVideo" playsinline type='video/mp4'>
 		<source src="{{url('/images/Redefine Meals - Website Loop 2022_1080 HQ V3.mp4')}}" alt="Home Video"/>
 	</video>
+	<img class='backup_image' src="{{url('/images/Redefine_May22-6026.jpg')}}">
 	<div class="homeUI">
 		<h1>Meals To Match Your Lifestyle</h1>
 		<button class="order">ORDER NOW</button>
-		
-
 	</div>
 </div>
 
-<div class="instructions_section">
 
+<div class="quote_section translated_left">
+	<div class="quote_text-container" data-aos="fade-in">
+		<h1>HEALTHY MADE SIMPLE</h1>
+	</div>
+	<img class="hms" src="{{url('/images/Redefine_3meals.png')}}" data-aos="zoom-out">
+</div>
+
+<div class="section_title" data-aos="fade-in">
+	<h2>60+ MEAL OPTIONS TO MEET YOUR DIETARY NEEDS </h2>
+</div>
+<div class="gallery_section" data-aos="zoom-out">
+	<div class="gallery_group">
+		<div class="gallery_column">
+			<img src="{{url('/images/Redefine_May22-6026.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_Apr22-3475 (1).jpg')}}">
+		</div>
+		<div class="gallery_column">
+			<img src="{{url('/images/RedefineMeals_Apr22-3541.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_Apr22-3280.jpg')}}">
+		</div>
+	</div>
+	<div class="gallery_group">
+		<div class="gallery_column">
+			<img src="{{url('/images/Redefine_May22-6026.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_Apr22-3760.jpg')}}">
+		</div>
+		<div class="gallery_column">
+			<img src="{{url('/images/RedefineMeals_Apr22-3728.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_Apr22-3280_resized.jpg')}}">
+		</div>
+	</div>
+	<!--
+			<video autoplay muted loop>
+				<source src="{{url('/images/RedefineMeals_Animate_strawberry.mp4')}}" alt="Home Video"/>
+			</video>
+		-->
+</div>
+
+
+<div class="quote_section translated_right flex_reverse">
+	<img class="fnf" src="{{url('/images/4.png')}}" data-aos="fade-right">
+	<div class="quote_text-container" data-aos="fade-in">
+		<h2>GET FRESH, NEVER FROZEN MEALS DELIVERED RIGHT TO YOUR DOORSTEP</h2>
+	</div>
+</div>
+
+<div class="section_title" data-aos="fade-in">
+	<h1>HOW IT WORKS</h1>
+</div>
+
+<div class="instructions_section"data-aos="fade-in">
 	<div class="instruction_slide">
 		<div class="slide_header">
 			<h1>CHOOSE YOUR MEALS</h1>
 			<div class="slide_index"><h1>1</h1></div>
 		</div>
 		<div class="slide_body">
-			<h3>Pick your favorite meals - We have +60 healthy prepared meals on our menu, and add new options weekly.  We offer 7, 10, 15 and 20 meal options. </h3>
+			<h3>Pick your favorite meals - We have +60 healthy prepared meals on our menu, and add new options weekly.  We offer 7, 10, 15 and 20 meal options. 
+			<br><button>Build A Package</button></h3>
 			<img src="{{url('/images/RedefineMeals_aug22-8429.jpg')}}">
 		</div>
 	</div>
 </div>
 
-<div class="instructions_section">
+<div class="instructions_section" data-aos="fade-in">
 
 	<div class="instruction_slide">
 		<div class="slide_header">
@@ -231,13 +619,15 @@
 			<div class="slide_index"><h1>2</h1></div>
 		</div>
 		<div class="slide_body">
-			<h3>We deliver to Long Island and New York City four days a week. We also offer free in-store pick up at our <a href="/stores"> 7 store locations</a>.</h3>
+			<h3>We deliver to Long Island and New York City four days a week. We also offer free in-store pick up at our 7 store locations.<br>
+				<button>Store Locations</button>
+			</h3>
 			<img src="{{url('/images/RedefineMeals_Apr22-3883.jpg')}}">
 		</div>
 	</div>
 </div>
 
-<div class="instructions_section">
+<div class="instructions_section" data-aos="fade-in">
 
 	<div class="instruction_slide">
 		<div class="slide_header">
@@ -246,7 +636,12 @@
 		</div>
 		<div class="slide_body">
 			<h3>Heat, Eat & Repeat - Our meals come in microwavable and freezer-safe containers with specific heating instructions.  We recommend eating or freezing meals within 4-5 days. Order each week for Sunday, Monday, Tuesday or Thursday delivery.</h3>
-			<img src="{{url('/images/RedefineMeals_aug22-8093.jpg')}}">
+			<!--<div class="slide_video">
+				<video autoplay muted loop id="GreekAnimation">
+					<source src="{{url('/images/GreekAnimation.mp4')}}" alt="GreekAnimation"/>
+				</video>
+				<img class='backup_image' src="{{url('/images/Redefine_May22-6026.jpg')}}">
+			</div>-->
 		</div>
 	</div>
 </div>
@@ -262,9 +657,11 @@
 		</div>
 	</div>
 </div>
+
+</div>
+
 <script type="text/javascript" src="{{url('/js/zipcodes.js')}}"></script>
 <script type="text/javascript">
-	console.log(zipcode_json)
 	let inp_zipcode = document.getElementById('zipcode')
 	let button_zipcode = document.getElementById("zipcode_button")
 	const deliverables = []//['07020', '11733', '10956', '37690']
@@ -295,6 +692,26 @@
 		}
 		
 	}
+	class FadeOutElement{
+            constructor(element, rate){
+                //class works the same as "about us" section javascript, only without a background element 
+                this.rate = rate
+                this.element = document.getElementById(element)
+                this.placement = window.scrollY + this.element.getBoundingClientRect().top
+            };
+            scrollFadeEffect(){
+                let displacement = (-this.rate*((pageYOffset - this.placement)**2) + 100)
+                this.element.style.opacity = displacement + '%'
+            }
+
+        }
+        
+        
+    window.addEventListener('scroll', () => {
+        let homepagevideo = new FadeOutElement('homepagevideo', .005)
+
+        homepagevideo.scrollFadeEffect() 
+    })  
 
 
 

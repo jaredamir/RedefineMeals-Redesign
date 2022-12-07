@@ -559,13 +559,13 @@ svg:nth-child(5){
 <!--Container for the page at Mobile and Tablet Screen Width-->
 <div class="testimonial_container-mobile-tablet">
 	<div class="testimonial_card-thin">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Gena%20Bradshaw-resized.jpg" class="card-img-top" alt="...">
+		<img src="{{url('/images/Gena Bradshaw-resized.jpg')}}" class="card-img-top" alt="...">
 		<div>
 			<p><strong>Gena Bradshaw</strong><small>, Fitness Coach and two-time cancer survivor</small></br><i class="arrow-down"></i></br>"Redefine Meals not only provides great food but education behind why food is fuel as well. Personally, I love the meals, they are tasty, filling, and healthy. I am a part of a family fitness business, Bradshaw Personal Fitness, we love the food and align with Redefine Meals so much that we decided to work together. Our clients love the meals as well and enjoy feeding their families these meals too."</p>
 		</div>
 	</div>
 	<div class="testimonial_card-thin">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/George%20Greene-resized.jpg"/>
+		<img src="{{url('/images/George Greene-resized.jpg')}}" class="card-img-top" alt="..."/>
 		<div>
 			<p><strong>George Greene</strong><small>, Division-1 Associate Athletic Director of Higher Performance</small></br></br>"Redefine meals have been a game changer for our athletic department. The quality of the food, the variety, and the service match the needs of the elite athletes we have at Stony Brook University. In my experience an area that can separate good athletes and great athletes is attention to performance nutrition and Redefined Meals allows us to close that gap."</p>
 		</div>
@@ -583,7 +583,7 @@ svg:nth-child(5){
 <!--Container for the page at Desktop and Greater Screen Width-->
 <div class="testimonial_container-desktop">
 	<div class="testimonial_card-thin">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Gena%20Bradshaw-resized.jpg" class="card-img-top" alt="...">
+		<img src="{{url('/images/Gena Bradshaw-resized.jpg')}}" class="card-img-top" alt="...">
 		<div>
 			<p><strong>Gena Bradshaw</strong><small>, Fitness Coach and two-time cancer survivor</small></br><i class="arrow-down"></i></br>"Redefine Meals not only provides great food but education behind why food is fuel as well. Personally, I love the meals, they are tasty, filling, and healthy. I am a part of a family fitness business, Bradshaw Personal Fitness, we love the food and align with Redefine Meals so much that we decided to work together. Our clients love the meals as well and enjoy feeding their families these meals too."</p>
 		</div>
@@ -595,7 +595,7 @@ svg:nth-child(5){
 		</div>
 	</div>
 	<div class="testimonial_card-thin">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/George%20Greene-resized.jpg"/>
+		<img src="{{url('/images/George Greene-resized.jpg')}}"/>
 		<div>
 			<p><strong>George Greene</strong><small>, Division-1 Associate Athletic Director of Higher Performance</small></br><i class="arrow-down"></i></br>"Redefine meals have been a game changer for our athletic department. The quality of the food, the variety, and the service match the needs of the elite athletes we have at Stony Brook University. In my experience an area that can separate good athletes and great athletes is attention to performance nutrition and Redefined Meals allows us to close that gap."</p>
 		</div>

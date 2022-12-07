@@ -75,37 +75,34 @@
                 color: grey;
                 font-family: 'Roboto', sans-serif;
                 font-weight: 300;
-                
-
                 margin-bottom: 10px;
             }
 
-           .navbar{
-            position: absolute;  
-            top: 0px;
-            left: 0px;
+           .navbar{ 
+            position: relative;
             display: flex; 
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0px 0px;
+            flex-direction: column;
             flex-wrap: nowrap;
             width: 100%;
-            height: 100px;
+            height:fit-content;
             z-index: 1;
            }
 
            .navbar a{
             color: darkslategrey;
-            font-size: 20px;
+            font-size: 25px;
             font-family: 'Roboto';
-            font-weight: 300;
+            font-weight: 100;
             text-decoration: none;
-            z-index: 1;
-            
+            margin: 20px;
+            transition: all ease .1s;
+            border-bottom: 0px solid darkslategrey;
            }
 
            .navbar a:hover{
             transform: scale(1.1);
+            color: #74B84F;
+            border-bottom: .5px solid darkslategrey;;
            }
 
            button.navbar-dropdown{
@@ -117,30 +114,20 @@
             width: 50px;
             height: 50px;
             z-index: 2;
+            outline: none;
            }
 
            button.navbar-dropdown svg{
-            width: 100%;
+            width: 40px;
             height: auto;
+            fill: darkslategrey;
            }
         @media only screen and (min-width: 1px){
-            .navbar{
-            flex-direction: column;
-            width: 100px;
-            height: 100%;
-            display: none;
-           }
-           button.navbar-dropdown{display: block;}
+            
         }
         @media only screen and (min-width: 762px){
-           .navbar{
-            flex-direction: row;
-            width: 100%;
-            height: 100px;
-            display: flex;
-           }
-           button.navbar-dropdown{display: none;}
-       }
+           
+        }
         </style>
 
     </head>
@@ -153,29 +140,22 @@
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navoffcanvas" aria-labelledby="navoffcanvasLabel">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="navoffcanvasLabel">Menu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-                <div>
-                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                </div>
-                <div class="dropdown mt-3">
-                  
+                <div class="navbar" id="nav1">
+                    <a href="/">Home</a>
+                    <a href="/testimonials">Reviews</a>
+                    <a href="/aboutus">About Us</a>
+                    <a href="/giftcards">Gift Cards</a>
+                    <a href="/meettheteam">MTT</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/stores">Stores</a>
+                    <a href="/coaching">Coach</a>
                 </div>
               </div>
             </div>
 
-            <div class="navbar" id="nav1">
-                <a href="/">Home</a>
-                <a href="/testimonials">Reviews</a>
-                <a href="/aboutus">About Us</a>
-                <a href="/giftcards">Gift Cards</a>
-                <a href="/meettheteam">MTT</a>
-                <a href="/faq">FAQ</a>
-                <a href="/stores">Stores</a>
-                <a href="/coaching">Coach</a>
-            </div>
             <noscript>Please Enable Javascript In Your Browser To View This Page</noscript>
             @yield('content')
 

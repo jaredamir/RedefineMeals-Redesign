@@ -11,6 +11,12 @@
 	    height: 50%;
 	    padding: 90px 0px;
 }
+div.faq-container{
+    width: 100%; 
+    height: fit-content; 
+    overflow: hidden; 
+    position: relative;
+}
 
 	div.faq-header h1{
 	    text-align: center;
@@ -22,14 +28,42 @@
 	div.faq-header h1::after{
 	    content: "" ;
 	    position: absolute;
-	    left: 40%;
+	    left: 42%;
 	    bottom: 30%;
 	    width: 70px;
 	    height: 10px;
 	    background-color: darkslategrey;
 }
+/*Mobile*/
+@media only screen and (min-width: 1px){
+  div.faq-header h1{
+    font-size: 14vw;
+  }
+  div.faq-header h1::after{
+      left: 35%;
+      bottom: 32%;
+      width: 10vw;
+      height: 7px;
+  }
+
+}
+
+/*Tablet and Desktop*/
+@media only screen and (min-width: 768px){
+  div.faq-header h1{
+    font-size: 7vw;
+  }
+  div.faq-header h1::after{
+      left: 42%;
+      bottom: 30%;
+      width: 5vw;
+      height: 10px;
+  }
+
+}
 </style>
   
+<div class="faq-container">
   <div class="faq-header" data-aos="fade-down">
   	<h1>FAQ</h1>
   </div>
@@ -218,7 +252,7 @@
 
 
 </div>
-
+</div>
 
 
 

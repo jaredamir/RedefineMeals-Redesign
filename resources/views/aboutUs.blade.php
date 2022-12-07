@@ -388,7 +388,7 @@ div.heading h1{
             };
             scrollEffect(){
                 //uses a negative quadratic equation to change the opacity of the card, reaching 100% (vertex) when in centered view
-                var displacement = (-this.rate*((pageYOffset - this.placement)**2) + 100)
+                let displacement = (-this.rate*((pageYOffset - this.placement)**2) + 100)
                 this.card.style.opacity = displacement + '%'
                 this.background.style.opacity = displacement + '%'
             }
@@ -402,9 +402,9 @@ div.heading h1{
         //while the rate can be customzied invidially, it was set to .001 so each card has a the same rate since they are all the same height on this page
         set_rate = .001
 
-        var card1 = new ValueCard('card1', set_rate)
-        var card2 = new ValueCard('card2', set_rate)
-        var card3 = new ValueCard('card3', set_rate)
+        let card1 = new ValueCard('card1', set_rate)
+        let card2 = new ValueCard('card2', set_rate)
+        let card3 = new ValueCard('card3', set_rate)
 
         //each card's method is called here
         card1.scrollEffect()

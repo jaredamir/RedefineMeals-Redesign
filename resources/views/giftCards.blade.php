@@ -3,6 +3,12 @@
 @section('content')
 
 <style type="text/css">
+	div.giftCard_page-container{
+	    width: 100%; 
+	    height: fit-content; 
+	    overflow: hidden; 
+	    position: relative;
+	}
 	div.landing-section{
 		position: relative;
 		width: 100%;
@@ -23,7 +29,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		box-shadow: 27.1875px 27.1875px 61.1719px 13.5938px rgba(0, 0, 0, 0.15), 101.953px 101.953px 101.953px 27.1875px rgba(0, 0, 0, 0.15), 6px 8px 0px rgba(137, 137, 137, 0.25);
-		border-radius: 33.9844px;
+		border-radius: 34px;
 	}
 
 
@@ -80,7 +86,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		box-shadow: 27.1875px 27.1875px 61.1719px 13.5938px rgba(0, 0, 0, 0.15), 101.953px 101.953px 101.953px 27.1875px rgba(0, 0, 0, 0.15), 6.79688px 8px 0px rgba(137, 137, 137, 0.25);
-		border-radius: 33.9844px;
+		border-radius: 34px;
 	}
 
 
@@ -136,8 +142,8 @@
 	}
 	div.landing-section h1::after{
 	    top: 80%;
-	    width: 5vw;
-	    height: 1vw;
+	    width: 7vw;
+	    height: 1.5vw;
 	}
 	div.landing-section h1{display: none;}
 	div.landing-section > .gift_card-mobile_header{display: block;}
@@ -171,7 +177,7 @@
 }
 
 </style>
-
+<div class="giftCard_page-container">
 <div class="landing-section">
 	<h1 data-aos="fade-in">GIFT<br>CARDS</h1>
 	<h1 class="gift_card-mobile_header" data-aos="fade-in">GIFT CARDS</h1>
@@ -185,7 +191,7 @@
 		<div class="giftCard_list"></div>
 	</div>
 </div>
-
+</div>
 
 
 @endsection

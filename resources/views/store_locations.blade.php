@@ -54,7 +54,7 @@ div.map_section > div.list_header{
 	width: 30%;
 	padding: 10px 30px;
 	border-bottom: 1px solid lightgray;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(8px);
 }
 div.list_header h1{
@@ -79,8 +79,8 @@ div.list_header input:focus{
 	outline: none;
 }
 
-
 div.map_section > div.list_body{
+
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -90,8 +90,8 @@ div.map_section > div.list_body{
 
 	display: flex;
 	flex-direction: column;
-	background: rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(8px);
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(5px);
 }
 div.list_body > div.location_item{
 	position: relative;
@@ -293,6 +293,9 @@ div.otf_card button{
 	div.otf_section > div.otf_bio{
 		width: 90%;
 	}
+	div.location_item button{
+		font-weight: 300;
+	}
 	
 }
 
@@ -353,6 +356,9 @@ div.otf_card button{
 	}
 	div.otf_section > div.otf_bio{
 		width: 70%;
+	}
+	div.location_item button{
+		font-weight: 100;
 	}
 }
 
@@ -459,7 +465,6 @@ div.otf_card button{
 	let lake_grove = L.marker([40.852940, -73.114910]).addTo(myMap);
 	let port_jeff = L.marker([40.922430, -73.050470]).addTo(myMap);
 
-	port_jeff.setOpacity(.5)
 
 	//pop ups for the markers
 	lake_grove.bindPopup("<b>Lake Grove</b>");
