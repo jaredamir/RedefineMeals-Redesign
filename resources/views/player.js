@@ -13,7 +13,7 @@ class Player{
     rect(this.spX, this.spY, this.pWidth, this.pHeight)
   }
   
-  floorCol(){
+  floorCollision(){
     let pOrigin_yPos = (this.spY/blockSize) 
     let pOrigin_row = floor(pOrigin_yPos)*blockSize + this.pHeight
     let floorIndex =  floor(pOrigin_yPos)+(this.pHeight/blockSize)

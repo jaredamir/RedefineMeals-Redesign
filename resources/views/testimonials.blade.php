@@ -40,7 +40,7 @@ div.testimonial_container-desktop{ /* the container for the desktop view */
 	height: 50%;
 	width: 100%;
 	padding: 30px 40px;
-	background-image: url("https://redefinemeals.com/storage/photos/15/Resized%20Images/Redefine_logo-dark_background.jpg");
+	background-image: url("{{url('/images/Redefine_logo-dark_background.jpg')}}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -70,7 +70,7 @@ div.heading{
 	height: fit-content;
 	width: 100%;
 	padding: 50px 20px;
-	background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+	background-image: url("{{url('/images/Redefine_background_colorTinted.jpg')}}");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -507,7 +507,7 @@ svg:nth-child(5){
 				padding: 13px 40px;
 				overflow: auto;
 
-				background-image: url("https://redefinemeals.com/storage/photos/15/Resized%20Images/Redefine_logo-dark_background.jpg");
+				background-image: url("{{url('/images/Redefine_logo-dark_background.jpg')}}");
 			  background-repeat: no-repeat;
 			  background-attachment: scroll;
 			  background-size: cover;
@@ -612,7 +612,7 @@ svg:nth-child(5){
 
 <div class="review">
 	<div class="review-heading">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Karen%20Hilsenbeck.png" alt="...">
+		<img src="{{url('/images/Google_Review_Icons/Karen Hilsenbeck.png')}}" alt="...">
 		<p class="review-heading-name">Karen Hilsenbeck</p>
 	</div>
 	<div class="stars">
@@ -642,7 +642,7 @@ Highly recommend this company!</p>
 
 <div class="review">
 	<div class="review-heading">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Jessica%20Behrenfeld.png" alt="...">
+		<img src="{{url('/images/Google_Review_Icons/Jessica Behrenfeld.png')}}" alt="...">
 		<p class="review-heading-name">Jessica Behrenfeld</p>
 	</div>
 	<div class="stars">
@@ -670,7 +670,7 @@ Highly recommend this company!</p>
 
 <div class="review">
 	<div class="review-heading">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Kristine%20Robinson.png" alt="...">
+		<img src="{{url('/images/Google_Review_Icons/Kristine Robinson.png')}}" alt="...">
 		<p class="review-heading-name">Kristine Robinson</p>
 	</div>
 	<div class="stars">
@@ -701,7 +701,7 @@ Highly recommend this company!</p>
 
 <div class="review">
 	<div class="review-heading">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Sarah%20F.png" alt="...">
+		<img src="{{url('/images/Google_Review_Icons/Sarah F.png')}}" alt="...">
 		<p class="review-heading-name">Sarah F</p>
 	</div>
 	<div class="stars">
@@ -723,7 +723,7 @@ Highly recommend this company!</p>
 
 <div class="review">
 	<div class="review-heading">
-		<img src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Pete%20Campbell.png" alt="...">
+		<img src="{{url('/images/Google_Review_Icons/Pete Campbell.png')}}" alt="...">
 		<p class="review-heading-name">Pete Campbell</p>
 	</div>
 	<div class="stars">
@@ -756,7 +756,7 @@ Highly recommend this company!</p>
 <!-- Container for the "Leave a Review" header and QR code -->
 <div class="qr-code">
 	<h1>LEAVE US A REVIEW!</h1>
-	<a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0zEovMLZIrkgzYLRSNaiwsEy1MDZPNE9OMUk0MTQ2tTKoSDRNSjG2MEpOSwORqeZefEWpKalpmXmpCrmpiTnFAMTTFQ8&q=redefine+meals&oq=re&aqs=chrome.2.69i57j0i67j46i67i175i199j69i60l5.3029j0j7&sourceid=chrome&ie=UTF-8"><img class="center" src="https://redefinemeals.com/storage/photos/15/Resized%20Images/Review-qr-code.png"/></a> <!-- the QR code image is put inside an anchor (<a>) with the link to the google review, making the image a button -->
+	<a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0zEovMLZIrkgzYLRSNaiwsEy1MDZPNE9OMUk0MTQ2tTKoSDRNSjG2MEpOSwORqeZefEWpKalpmXmpCrmpiTnFAMTTFQ8&q=redefine+meals&oq=re&aqs=chrome.2.69i57j0i67j46i67i175i199j69i60l5.3029j0j7&sourceid=chrome&ie=UTF-8"><img class="center" src="{{url('/images/Review-qr-code.png')}}"/></a> <!-- the QR code image is put inside an anchor (<a>) with the link to the google review, making the image a button -->
 	<p>Click/Tap On The QR Code To Leave A Review On Our Google Page Or Use Your Smartphone's Camera To Scan It</p>
 </div>
 @endsection

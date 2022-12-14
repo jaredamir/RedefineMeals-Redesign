@@ -250,6 +250,14 @@ div.faq-container{
     </div>
   </div>
 
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThirteen">
+      <button class="accordion-button collapsed" type="button">
+        <strong>Any other questions email us at info@redefinemeals.com</strong>
+      </button>
+    </h2>
+  </div>
+
 
 </div>
 </div>

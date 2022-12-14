@@ -6,6 +6,7 @@ div.locations-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 40vh;
@@ -13,7 +14,7 @@ div.locations-header{
     margin-bottom: 50px;
 
 
-    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+    background-image: url("{{url('/images/Redefine_background_colorTinted.jpg')}}");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
@@ -27,6 +28,7 @@ div.locations-header h1{
     font-weight: 100;
     font-family: 'Roboto';
     font-size: 7vw;
+    color: darkslategray;
 }
 
 
@@ -231,7 +233,9 @@ div.otf_card button{
 	border-radius: 2px;
 	margin: 20px 0px;
 	white-space: nowrap;
+	width: 100%;
 }
+
 
 
 /*mobile and tablet view*/
@@ -295,6 +299,9 @@ div.otf_card button{
 	}
 	div.location_item button{
 		font-weight: 300;
+	}
+	div.locations-header{
+		display: none;
 	}
 	
 }
@@ -360,12 +367,17 @@ div.otf_card button{
 	div.location_item button{
 		font-weight: 100;
 	}
+	div.locations-header{
+		display: flex;
+	}
 }
 
 
 </style>
 
-	<div class="locations-header" data-aos="fade-down"><h1>OUR LOCATIONS</h1></div>
+	<div class="locations-header" data-aos="fade-down">
+		<h1>OUR LOCATIONS</h1>
+	</div>
 
 	<div class="map_section" data-aos="fade-up">
 		<div id="map"></div>
@@ -433,17 +445,17 @@ div.otf_card button{
 			<div class="otf_card">
 				<h3>Unique Fitness Farmingville</h3>
 				<h4>1191 Portion Rd, Farmingville, NY 11738</h4>
-				<button href="">View More</button>
+				<a href="https://www.uniquehealthandfitness.com/farmingville-home"><button href="">View More</button></a>
 			</div>
 			<div class="otf_card">
 				<h3>Unique Fitness Holbrook</h3>
 				<h4>4890 Veterans Memorial Highway, Holbrook, NY 11741</h4>
-				<button>View More</button>
+				<a href="https://www.uniquehealthandfitness.com/holbrook"><button>View More</button></a>
 			</div>
 			<div class="otf_card">
 				<h3>Unique Fitness Shirley</h3>
 				<h4>78 McGraw Street, Shirley, NY 11967</h4>
-				<button>View More</button>
+				<a href="https://www.uniquehealthandfitness.com/Shirley"><button>View More</button></a>
 			</div>
 		</div>
 	</div>
@@ -451,7 +463,7 @@ div.otf_card button{
 
 <script type="text/javascript">
 	//makes the actual map to attach to the html element
-	let myMap = L.map("map").setView([40.8891, -73.2350], 10);
+	let myMap = L.map("map").setView([40.8891, -73.4350], 10);
 	myMap.scrollWheelZoom.disable();
 
 	//tile laye gives the theme(style) to display
@@ -463,57 +475,22 @@ div.otf_card button{
 
 	//Add markers to the map
 	let lake_grove = L.marker([40.852940, -73.114910]).addTo(myMap);
+	let bellmore = L.marker([40.663850, -73.526370]).addTo(myMap);
+	let commack = L.marker([40.841270, -73.293340]).addTo(myMap);
 	let port_jeff = L.marker([40.922430, -73.050470]).addTo(myMap);
-
+	let syosset = L.marker([40.811270, -73.497570]).addTo(myMap);
+	let babylon = L.marker([40.700290, -73.322040]).addTo(myMap);
+	let patchogue = L.marker([40.767180, -73.014840]).addTo(myMap);
 
 	//pop ups for the markers
 	lake_grove.bindPopup("<b>Lake Grove</b>");
+	bellmore.bindPopup("<b>Bellmore</b>");
+	commack.bindPopup("<b>Commack</b>");
 	port_jeff.bindPopup("<b>Port Jeff</b>");
-
-
-</script>
-
-<!-- Leaflet Tutorial -->
-<!--
-<script type="text/javascript">
-	//makes the actual map to aatach to the html element
-	let myMap = L.map("map").setView([37.61, -122.011], 10);
-
-	//tile laye gives the theme(style) to display
-	L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    // Attribution is obligatory as per copyright!
-	maxZoom: 20
-}).addTo(myMap);
-
-	//Add markers to the map
-	let sfo_marker = L.marker([37.618, -122.375]).addTo(myMap);
-	let oak_marker = L.marker([37.710, -122.224]).addTo(myMap);
-	let sjc_marker = L.marker([37.361, -121.928]).addTo(myMap);
-
-	//add circles to the map
-	let golden_gate = L.circle([37.819, -122.478], {
-    color: "lime-green",
-    fillColor: "green",
-    fillOpacity: "0.5",
-    radius: 1500
-}).addTo(myMap);
-
-	//pop ups for the markers
-	sfo_marker.bindPopup("<b>SFO</b>");
-oak_marker.bindPopup("<b>OAK</b>");
-sjc_marker.bindPopup("<b>SJC</b>");
-golden_gate.bindPopup("<b>Golden Gate Bridge</b>");
-diablo.bindPopup("<b>Mt. Diablo</b>");
+	syosset.bindPopup("<b>Syosset</b>");
+	babylon.bindPopup("<b>Babylon</b>");
+	patchogue.bindPopup("<b>Patchogue</b>");
 
 </script>
--->
-
-
-
-
-
-
-
 
 @endsection

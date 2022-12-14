@@ -13,7 +13,7 @@
     margin-bottom: 50px;
 
 
-    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+    background-image: url("{{url('/images/Redefine_background_colorTinted.jpg')}}");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
@@ -26,6 +26,7 @@
       font-weight: 100;
       font-family: 'Roboto';
       font-size: 7vw;
+      color: darkslategray;
   }
 
   div.nutrition_container{
@@ -197,7 +198,7 @@
 <div class="nutrition_container" data-aos="fade-in">
   <div class="nutrition_section" id="Ashley" style="opacity: 0%;">
     <svg class="next" onclick="next()"></svg>
-    <img src="{{url('/images/DANIELRO-PHOTOS-GENA-47.jpeg')}}">
+    <img src="{{url('/images/ashley_vadasz.jpeg')}}">
     <div class="nutrition_body" style="justify-content: space-between;">
       <h1>Ashley Vadasz</h1>
       <div class="nutrition_bio">

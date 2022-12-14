@@ -72,6 +72,6 @@ function control(){
   }else if (keyIsDown(UP_ARROW)){
     player.spY -= 5
   }else if (keyIsDown(DOWN_ARROW)){
-    if(!player.floorCol()){player.spY += 5}
+    if(!player.floorCollision()){player.spY += 5}
   }
 }

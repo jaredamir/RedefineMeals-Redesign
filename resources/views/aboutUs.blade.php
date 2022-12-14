@@ -11,7 +11,6 @@ div.about_us-container{
 }
 
 div.whitespace{
-    display: block;
     width: 100%;
     height: 200px;
 }
@@ -27,7 +26,7 @@ div.about_us-header{
     margin-bottom: 50px;
 
 
-    background-image: url("https://redefinemeals.com/storage/photos/15/Redefine_background_colorTinted.jpg");
+    background-image: url("{{url('/images/Redefine_background_colorTinted.jpg')}}");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
@@ -51,6 +50,7 @@ div.about_us-header h1{
     font-weight: 100;
     font-family: 'Roboto';
     font-size: 7vw;
+    color: darkslategray;
 }
 
 div.about_us{
@@ -401,7 +401,15 @@ div.heading h1{
 
         //while the rate can be customzied invidially, it was set to .001 so each card has a the same rate since they are all the same height on this page
         set_rate = .001
+        const cards = [
+          new ValueCard("card1", 0.001),
+          new ValueCard("card2", 0.001),
+          new ValueCard("card3", 0.001),
+        ];
 
+          // each card's method is called here
+          cards.forEach(card => card.scrollEffect());
+        /*
         let card1 = new ValueCard('card1', set_rate)
         let card2 = new ValueCard('card2', set_rate)
         let card3 = new ValueCard('card3', set_rate)
@@ -410,7 +418,7 @@ div.heading h1{
         card1.scrollEffect()
         card2.scrollEffect()
         card3.scrollEffect()
-            
+        */
     })  
 </script>
 

@@ -3,10 +3,14 @@
 @section('content')
 
 <style type="text/css">
-	body{
+
+	div.mtt_page-container{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
 		background-color: #F2EEE2;
 	}
-
 	/*Header*/
 	div.mtt-header{
 	    display: flex;
@@ -29,8 +33,8 @@
 	div.mtt-header h1::after{
 	    content: "" ;
 	    position: absolute;
-	    left: 25%;
-	    bottom: 8%;
+	    left: 24%;
+	    bottom: 0%;
 	    width: 5vw;
 	    height: .7vw;
 	    background-color: darkslategrey;
@@ -171,6 +175,8 @@
 
 </style>
 
+
+<div class="mtt_page-container">
 <div class="mtt-header" data-aos="fade-down">
 	<h1>MEET THE TEAM</h1>
 </div>
@@ -187,18 +193,18 @@
 				<h1>Matt Riss</h1>
 			</div>
 		</div>
-		<div class="member" onclick="display('jess_fallica')">
-			<img src="{{url('/images/Jess_headshot.jpg')}}">
-			<div class="highlight_container" id="jess_fallica">
-				<div class="member_highlight"></div>
-				<h1>Jess Fallica</h1>
-			</div>
-		</div>
 		<div class="member" onclick="display('mark_ciaburri')">
 			<img src="{{url('/images/Mark_headshot.jpg')}}">
 			<div class="highlight_container" id="mark_ciaburri">
 				<div class="member_highlight"></div>
 				<h1>Mark Ciaburri</h1>
+			</div>
+		</div>
+		<div class="member" onclick="display('jess_fallica')">
+			<img src="{{url('/images/Jess_headshot.jpg')}}">
+			<div class="highlight_container" id="jess_fallica">
+				<div class="member_highlight"></div>
+				<h1>Jess Fallica</h1>
 			</div>
 		</div>
 		<div class="member" onclick="display('frank_sharp')">
@@ -233,7 +239,8 @@
 		<h2>Mark Ciaburri, Co-founder</h2>
 		<h4>Mark discovered his passion for nutrition at young age, cooking since he was tall enough to reach the counter. He attributes his creativity and love for food to his family who owned a bakery in Brooklyn and taught him how to cook traditional Italian recipes from an early age.  At 19, while playing soccer and studying Nutrition and Dietetics at Buffalo State, Mark along with best friend Matt Riss founded Redefine Meals.  He quickly learned the ins and outs of building an idea into a business and working tirelessly to make it a huge success. During the early years, Mark worked every functioning role at the company, but now the kitchen remains his number one focus and passion.  That is why each and every meal on Redefine’s menu is a personal labor of love, and reflective of his belief in proper nutrition. Mark has dedicated his life to making healthy, delicious food using simple homemade ingredients that improves people’s lives from the inside out. </h4>
 	</div>
-
+</div>
+</div>
 <script type="text/javascript">
 	class TeamMember {
 		constructor(name_id){
@@ -280,8 +287,6 @@
 
 
 
-
-</div>
 
 <!-- Version 2
 <script type="text/javascript">

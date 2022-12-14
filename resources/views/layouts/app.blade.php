@@ -12,9 +12,6 @@
         <!--AOS CSS Import-->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <!--Redefine Custom CSS Import-->
-        <link rel="stylesheet" href="/Users/jaredhoke/Desktop/ReDefine Website/Website/templates/RedefineCSS.css" />
-
         <!--Media Detection -->
         <meta name="viewport" content="width=device-width, inital-scale=1"/>
 
@@ -79,16 +76,34 @@
             }
 
            .navbar{ 
-            position: relative;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            align-items: flex-start; 
+            justify-content: space-between;
             display: flex; 
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: nowrap;
             width: 100%;
             height:fit-content;
             z-index: 1;
+            padding: 10px 20px;
            }
 
-           .navbar a{
+           .menu{ 
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex; 
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: fit-content;
+            z-index: 1;
+            padding: 10px 20px;
+           }
+
+           .menu a{
             color: darkslategrey;
             font-size: 25px;
             font-family: 'Roboto';
@@ -98,17 +113,16 @@
             transition: all ease .1s;
             border-bottom: 0px solid darkslategrey;
            }
+           
 
-           .navbar a:hover{
+           .menu a:hover{
             transform: scale(1.1);
             color: #74B84F;
             border-bottom: .5px solid darkslategrey;;
            }
 
            button.navbar-dropdown{
-            position: absolute;
-            top: 30px;
-            left: 30px;
+            position: relative;
             background: none;
             border: none;
             width: 50px;
@@ -132,18 +146,19 @@
 
     </head>
     <body>
-
+        <div class="navbar">
             <button class="navbar-dropdown" data-bs-toggle="offcanvas" data-bs-target="#navoffcanvas" aria-controls="navoffcanvas"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg></button>
 
+        </div>
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navoffcanvas" aria-labelledby="navoffcanvasLabel">
               <div class="offcanvas-header">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-                <div class="navbar" id="nav1">
+                <div class="menu" id="nav1">
                     <a href="/">Home</a>
                     <a href="/testimonials">Reviews</a>
                     <a href="/aboutus">About Us</a>
@@ -159,7 +174,6 @@
             <noscript>Please Enable Javascript In Your Browser To View This Page</noscript>
             @yield('content')
 
-    <script src="{{url('js/navbar.js')}}"></script>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
@@ -170,20 +184,6 @@
     });
   </script>
 
-  <script type="text/javascript">
-      const nav1 = document.getElementById('nav1')
-      const dropdown_button = document.getElementByClassName('navbar-dropdown')
-
-      function dropdown(){
-        if(nav1.style.display == 'none'){
-            nav1.style.display = 'flex'
-        }else{
-            nav1.style.display = 'none'
-        }
-      }
-
-
-  </script>
     </body>
 
 

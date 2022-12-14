@@ -22,11 +22,10 @@
 	}
 	div.videoBanner img.backup_image{
 		position: absolute;
-		top: 0px;
+		bottom: 0px;
 		left: 50%;
     	transform: translate(-50%, 0);
-		width: auto;
-		height: 100vh;
+		object-fit: cover;
 		z-index: -2;
 	}
 
@@ -48,7 +47,7 @@
 		font-family: "Roboto";
 		font-weight: 300;
 		text-align: center;
-		font-size: 6vw;
+		font-size: 5vw;
 		color: white;
 		mix-blend-mode: difference;
 	}
@@ -312,7 +311,7 @@
 		justify-content: center;
 		align-items: center;
 		margin: 100px 0px;
-		padding: 0px 40px;
+		padding: 0px 20px;
 	}
 	div.section_title h1{
 		font-family: 'Roboto';
@@ -367,6 +366,15 @@
 		justify-content: space-between;
 		column-gap: 15px;
 	}
+	.redefine_logo{
+        height: 5vw;
+        width: auto;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2;
+    }
 
 
 	/*Mobile and Table*/
@@ -449,13 +457,17 @@
 		div.slide_body img{
 			border-radius: 10px;
 		}
+		.redefine_logo{
+            height: 50px;
+            width: auto;
+        }
 	}
 
 
 	/*Desktop*/
 	@media only screen and (min-width: 768px){
 		div.homeUI h1{
-			font-size: 6vw;
+			font-size:5vw;
 		}
 
 		div.homeUI > button.order{
@@ -527,40 +539,63 @@
 		div.slide_body img{
 			border-radius: 20px;
 		}
+		.redefine_logo{
+            height: 5vw;
+            width: auto;
+        }
 
 	}
 
+	div.preloader{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 3;
+		transition: all linear 1s;
+		column-gap: 50px;
+	}
 
 
 </style>
-
+<div class="preloader">
+	<img src="{{url('/images/Redefine_leaf_hd_small.jpg')}}">
+	<div class="progress"  style="width: 200px;">
+	  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color: #65B54F"></div>
+	</div>
+</div>
 <div class="homepage-container">
 <div class="videoBanner" data-aos="fade-in" id="homepagevideo">
-	<video autoplay muted loop id="homePageVideo" playsinline type='video/mp4'>
+	<img class="redefine_logo" src="{{url('/images/Redefine_logo.png')}}">
+	<video loading="lazy" autoplay muted loop id="homePageVideo" playsinline type='video/mp4'>
 		<source src="{{url('/images/Redefine Meals - Website Loop 2022_1080 HQ V3.mp4')}}" alt="Home Video"/>
 	</video>
 	<img class='backup_image' src="{{url('/images/Redefine_May22-6026.jpg')}}">
 	<div class="homeUI">
-		<h1>Meals To Match Your Lifestyle</h1>
+		<h1>MEALS TO MATCH YOUR LIFESTYLE</h1>
 		<button class="order">ORDER NOW</button>
 	</div>
 </div>
 
-
-<div class="quote_section translated_left">
+<div class="quote_section translated_left flex_reverse">
 	<div class="quote_text-container" data-aos="fade-in">
-		<h1>HEALTHY MADE SIMPLE</h1>
+		<h2>GET FRESH, NEVER FROZEN MEALS DELIVERED RIGHT TO YOUR DOORSTEP</h2>
 	</div>
-	<img class="hms" src="{{url('/images/Redefine_3meals.png')}}" data-aos="zoom-out">
-</div>
-
+	<img class="fnf" src="{{url('/images/4.png')}}" data-aos="fade-right">
+</div> 
 <div class="section_title" data-aos="fade-in">
 	<h2>60+ MEAL OPTIONS TO MEET YOUR DIETARY NEEDS </h2>
 </div>
 <div class="gallery_section" data-aos="zoom-out">
 	<div class="gallery_group">
 		<div class="gallery_column">
-			<img src="{{url('/images/Redefine_May22-6026.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_Apr22-3280.jpg')}}">
 			<img src="{{url('/images/RedefineMeals_Apr22-3475 (1).jpg')}}">
 		</div>
 		<div class="gallery_column">
@@ -570,7 +605,7 @@
 	</div>
 	<div class="gallery_group">
 		<div class="gallery_column">
-			<img src="{{url('/images/Redefine_May22-6026.jpg')}}">
+			<img src="{{url('/images/RedefineMeals_aug22-7830-2.jpg')}}">
 			<img src="{{url('/images/RedefineMeals_Apr22-3760.jpg')}}">
 		</div>
 		<div class="gallery_column">
@@ -586,12 +621,7 @@
 </div>
 
 
-<div class="quote_section translated_right flex_reverse">
-	<img class="fnf" src="{{url('/images/4.png')}}" data-aos="fade-right">
-	<div class="quote_text-container" data-aos="fade-in">
-		<h2>GET FRESH, NEVER FROZEN MEALS DELIVERED RIGHT TO YOUR DOORSTEP</h2>
-	</div>
-</div>
+
 
 <div class="section_title" data-aos="fade-in">
 	<h1>HOW IT WORKS</h1>
@@ -620,7 +650,7 @@
 		</div>
 		<div class="slide_body">
 			<h3>We deliver to Long Island and New York City four days a week. We also offer free in-store pick up at our 7 store locations.<br>
-				<button>Store Locations</button>
+				<a href="/stores"><button>Store Locations</button></a>
 			</h3>
 			<img src="{{url('/images/RedefineMeals_Apr22-3883.jpg')}}">
 		</div>
@@ -636,6 +666,7 @@
 		</div>
 		<div class="slide_body">
 			<h3>Heat, Eat & Repeat - Our meals come in microwavable and freezer-safe containers with specific heating instructions.  We recommend eating or freezing meals within 4-5 days. Order each week for Sunday, Monday, Tuesday or Thursday delivery.</h3>
+			<img src="{{url('/images/RedefineMeals_aug22-8093.jpg')}}">
 			<!--<div class="slide_video">
 				<video autoplay muted loop id="GreekAnimation">
 					<source src="{{url('/images/GreekAnimation.mp4')}}" alt="GreekAnimation"/>
@@ -657,7 +688,8 @@
 		</div>
 	</div>
 </div>
-
+	
+	
 </div>
 
 <script type="text/javascript" src="{{url('/js/zipcodes.js')}}"></script>
@@ -713,7 +745,14 @@
         homepagevideo.scrollFadeEffect() 
     })  
 
+    window.addEventListener('load', ()=>{
+    	setTimeout(() => {
+			const preload_element = document.querySelector('.preloader')
+	    	preload_element.style.height = '0px'
+	    	preload_element.style.opacity = '0%'
+    	}, 1000);
 
+    })
 
 
 </script>
